@@ -2,4 +2,10 @@ main {
   font-size: 1rem;
   background-color: floralwhite;
   padding: 1rem;
+  height: 80%;
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-around;
 }

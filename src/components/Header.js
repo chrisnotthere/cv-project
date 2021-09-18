@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <header>
         CV Generator&emsp;
-        <i class="fa fa-file-o" aria-hidden="true"></i>
+        <i className="fa fa-file-o" aria-hidden="true"></i>
       </header>
     )
   }

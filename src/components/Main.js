@@ -26,6 +26,11 @@ class Main extends Component {
     })
   }
 
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   alert(`${this.state.name} ${this.state.description}`)
+  // }
+
   render() {
     return (
       <main>
@@ -34,6 +39,7 @@ class Main extends Component {
           description={this.state.description}
           handleNameChange={this.handleNameChange.bind(this)}
           handleDescriptionChange={this.handleDescriptionChange.bind(this)}
+          //HandleSubmit={() => this.handleSubmit()}
         />
         <CVPreview 
           name={this.state.name} 

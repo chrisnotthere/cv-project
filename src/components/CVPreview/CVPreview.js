@@ -6,10 +6,14 @@ class CVPreview extends Component {
   render() {
     return (
       <div className='CVPreview'>
-        this is CVPreview
+        <h2>CVPreview</h2>
         <br/>
-        <br/>
-        it will show your formatted cv/resume
+        <div>
+          <br/><br/>
+          Name: {this.props.name}
+          <br/><br/>
+          description: {this.props.description}
+        </div>
       </div>
     )
   }

@@ -3,3 +3,24 @@
   border: blue 1pt solid;
   width: 49%;
 }
+
+.form-group {
+  position: relative;
+  /* min-height: 3.5em; */
+}
+
+input.form-control {
+  height: 0.9rem;
+  position: absolute;
+  width: 60%;
+  /* top: 0; */
+  left: 10rem;
+}
+
+label.form-control-label {
+  position: absolute;
+  font-size: 0.8em;
+  /* top: 0; */
+  left: 5px;
+  text-transform: uppercase;
+}

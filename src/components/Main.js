@@ -10,7 +10,11 @@ class Main extends Component {
     // this is the default CV info, before the user enters any information
     this.state = {
       name: 'John Wick',
-      description: 'default description'
+      description: 'default description',
+      company: 'Google',
+      position: 'Junior Developer',
+      institution: 'Harvard University',
+      course: 'CS50: Introduction to Computer Science'
     }
   }
 
@@ -26,10 +30,45 @@ class Main extends Component {
     })
   }
 
+  handleCompanyChange = (event) => {
+    this.setState({
+      company: event.target.value
+    })
+  }
+
+  handlePositionChange = (event) => {
+    this.setState({
+      position: event.target.value
+    })
+  }
+
+  handleInstitutionChange = (event) => {
+    this.setState({
+      institution: event.target.value
+    })
+  }
+
+  handleCourseChange = (event) => {
+    this.setState({
+      course: event.target.value
+    })
+  }
+
   // handleSubmit = (event) => {
   //   event.preventDefault();
   //   alert(`${this.state.name} ${this.state.description}`)
   // }
+
+  handleReset = event => {
+    this.setState({
+      name: 'John Wick',
+      description: 'default description',
+      company: 'Google',
+      position: 'Junior Developer',
+      institution: 'Harvard University',
+      course: 'CS50: Introduction to Computer Science'
+    })
+  }
 
   render() {
     return (
@@ -37,13 +76,27 @@ class Main extends Component {
         <CVForm 
           name={this.state.name}
           description={this.state.description}
+          company={this.state.company}
+          position={this.state.position}
+          institution={this.state.institution}
+          course={this.state.course}
+
           handleNameChange={this.handleNameChange.bind(this)}
           handleDescriptionChange={this.handleDescriptionChange.bind(this)}
+          handleCompanyChange={this.handleCompanyChange.bind(this)}
+          handlePositionChange={this.handlePositionChange.bind(this)}
+          handleInstitutionChange={this.handleInstitutionChange.bind(this)}
+          handleCourseChange={this.handleCourseChange.bind(this)}
           //HandleSubmit={() => this.handleSubmit()}
+          handleReset={this.handleReset.bind(this)}
         />
         <CVPreview 
           name={this.state.name} 
           description={this.state.description}
+          company={this.state.company}
+          position={this.state.position}
+          institution={this.state.institution}
+          course={this.state.course}
         />
       </main>
     )

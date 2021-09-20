@@ -4,3 +4,13 @@
   max-width: 49%;
   min-width: 49%;
 }
+
+.cvheader {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1rem;
+  background-color: lightblue;
+  max-width: 600px;
+  /* padding: 1rem; */
+}

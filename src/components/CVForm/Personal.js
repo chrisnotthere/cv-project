@@ -97,7 +97,7 @@ class Personal extends Component {
             />
           </div>
 
-          <div className="form-group-area">
+          <div className="form-group-bottom">
             <label 
               className="form-control-label" 
               htmlFor="description">
@@ -107,14 +107,14 @@ class Personal extends Component {
               value={this.props.description} 
               onChange={this.props.handleDescriptionChange}
               placeholder="Description..." 
-              type="textarea" 
-              className="form-control-area" 
+              type="text" 
+              className="form-control" 
               id="description" 
               name="description" 
               required
             />
           </div>
-          <hr/>
+          {/* <hr/> */}
       </div>
     )
   }

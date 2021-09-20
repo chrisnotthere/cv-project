@@ -31,14 +31,12 @@ class CVForm extends Component {
             handleNameChange={this.props.handleNameChange}
             handleDescriptionChange={this.props.handleDescriptionChange}
           />
-          <br/><br/><br/><br/>
           <Experience 
             company={this.props.company}
             position={this.props.position}
             handleCompanyChange={this.props.handleCompanyChange}
             handlePositionChange={this.props.handlePositionChange}
           />
-          <br/><br/><br/><br/>
           <Education 
             institution={this.props.institution}
             course={this.props.course}
@@ -46,7 +44,6 @@ class CVForm extends Component {
             handleCourseChange={this.props.handleCourseChange}
           />
 
-          <br/><br/><br/>
           <button type="submit" >Submit</button>
           <button onClick={this.props.handleGeneratePDF} >Generate PDF</button>
           <button onClick={this.props.handleReset} >Reset</button>

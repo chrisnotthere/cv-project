@@ -10,7 +10,7 @@ class Main extends Component {
     // this is the default CV info, before the user enters any information
     this.state = {
       name: 'John Wick',
-      description: 'default description',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       company: 'Google',
       position: 'Junior Developer',
       institution: 'Harvard University',
@@ -62,7 +62,7 @@ class Main extends Component {
   handleReset = event => {
     this.setState({
       name: 'John Wick',
-      description: 'default description',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       company: 'Google',
       position: 'Junior Developer',
       institution: 'Harvard University',

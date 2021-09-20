@@ -23,7 +23,7 @@ class Experience extends Component {
               required
             />
           </div>
-          <br/><br/>
+
           <div className="form-group">
             <label 
               className="form-control-label" 
@@ -41,6 +41,61 @@ class Experience extends Component {
               required
             />
           </div>
+
+          <div className="form-group">
+            <label 
+              className="form-control-label" 
+              htmlFor="start">
+              Start Date
+            </label>
+            <input 
+              value={this.props.experienceStart} 
+              onChange={this.props.handleExperienceStartChange}
+              placeholder="Start Date" 
+              type="text" 
+              className="form-control" 
+              id="start" 
+              name="start" 
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label 
+              className="form-control-label" 
+              htmlFor="end">
+              End Date
+            </label>
+            <input 
+              value={this.props.experienceEnd} 
+              onChange={this.props.handleExperienceEndChange}
+              placeholder="End Date" 
+              type="text" 
+              className="form-control" 
+              id="end" 
+              name="end" 
+              required
+            />
+          </div>
+
+          <div className="form-group-bottom">
+            <label 
+              className="form-control-label" 
+              htmlFor="description">
+              Description
+            </label>
+            <input 
+              value={this.props.workDescription}
+              onChange={this.props.handleWorkDescriptionChange}
+              placeholder="Description" 
+              type="text" 
+              className="form-control" 
+              id="description" 
+              name="description" 
+              required
+            />
+          </div>
+          {/* <hr/> */}
       </div>
     )
   }

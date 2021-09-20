@@ -24,3 +24,7 @@ label.form-control-label {
   left: 5px;
   text-transform: uppercase;
 }
+
+button[type='submit'] {
+  display: none;
+}

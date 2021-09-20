@@ -18,6 +18,7 @@ class Header extends Component {
         </header>
         <hr/>
         <p>{this.props.description}</p>
+        <hr/>
       </>
     )
   }

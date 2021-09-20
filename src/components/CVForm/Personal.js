@@ -6,6 +6,7 @@ class Personal extends Component {
     return (
       <div className='personal'>
           <p>Personal Details</p>
+
           <div className="form-group">
             <label 
               className="form-control-label" 
@@ -23,8 +24,80 @@ class Personal extends Component {
               required
             />
           </div>
-          <br/><br/>
+
           <div className="form-group">
+            <label 
+              className="form-control-label" 
+              htmlFor="title">
+              Title
+            </label>
+            <input 
+              value={this.props.title} 
+              onChange={this.props.handleTitleChange}
+              placeholder="Title" 
+              type="text" 
+              className="form-control" 
+              id="title" 
+              name="title" 
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label 
+              className="form-control-label" 
+              htmlFor="phone">
+              Phone
+            </label>
+            <input 
+              value={this.props.phone} 
+              onChange={this.props.handlePhoneChange}
+              placeholder="Phone" 
+              type="text" 
+              className="form-control" 
+              id="phone" 
+              name="phone" 
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label 
+              className="form-control-label" 
+              htmlFor="email">
+              Email
+            </label>
+            <input 
+              value={this.props.email} 
+              onChange={this.props.handleEmailChange}
+              placeholder="Email" 
+              type="text" 
+              className="form-control" 
+              id="email" 
+              name="email" 
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label 
+              className="form-control-label" 
+              htmlFor="location">
+              Location
+            </label>
+            <input 
+              value={this.props.location} 
+              onChange={this.props.handleLocationChange}
+              placeholder="Location" 
+              type="text" 
+              className="form-control" 
+              id="location" 
+              name="location" 
+              required
+            />
+          </div>
+
+          <div className="form-group-area">
             <label 
               className="form-control-label" 
               htmlFor="description">
@@ -33,14 +106,15 @@ class Personal extends Component {
             <input 
               value={this.props.description} 
               onChange={this.props.handleDescriptionChange}
-              placeholder="Description" 
+              placeholder="Description..." 
               type="textarea" 
-              className="form-control" 
+              className="form-control-area" 
               id="description" 
               name="description" 
               required
             />
           </div>
+          <hr/>
       </div>
     )
   }

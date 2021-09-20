@@ -31,14 +31,14 @@ class CVForm extends Component {
             handleNameChange={this.props.handleNameChange}
             handleDescriptionChange={this.props.handleDescriptionChange}
           />
-          <br/>
+          <br/><br/><br/><br/>
           <Experience 
             company={this.props.company}
             position={this.props.position}
             handleCompanyChange={this.props.handleCompanyChange}
             handlePositionChange={this.props.handlePositionChange}
           />
-          <br/>
+          <br/><br/><br/><br/>
           <Education 
             institution={this.props.institution}
             course={this.props.course}

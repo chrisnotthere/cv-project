@@ -126,12 +126,6 @@ class Main extends Component {
     })
   }
 
-
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   alert(`${this.state.name} ${this.state.description}`)
-  // }
-
   handleReset = event => {
     this.setState({
       name: 'John Wick',
@@ -182,7 +176,6 @@ class Main extends Component {
           educationStart={this.state.educationStart}
           educationEnd={this.state.educationEnd}
           educationDescription={this.state.educationDescription}
-
 
           handleNameChange={this.handleNameChange.bind(this)}
           handleTitleChange={this.handleTitleChange.bind(this)}

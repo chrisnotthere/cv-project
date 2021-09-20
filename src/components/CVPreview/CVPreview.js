@@ -5,7 +5,7 @@ class CVPreview extends Component {
 
   render() {
     return (
-      <div className='CVPreview'>
+      <div className='cv-preview'>
         <h2>CVPreview</h2>
         <br/>
         <div>

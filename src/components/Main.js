@@ -70,6 +70,11 @@ class Main extends Component {
     })
   }
 
+  handleGeneratePDF = (event) => {
+    //event.preventDefault();
+    window.print();
+  }
+
   render() {
     return (
       <main>
@@ -89,6 +94,7 @@ class Main extends Component {
           handleCourseChange={this.handleCourseChange.bind(this)}
           //HandleSubmit={() => this.handleSubmit()}
           handleReset={this.handleReset.bind(this)}
+          handleGeneratePDF={this.handleGeneratePDF.bind(this)}
         />
         <CVPreview 
           name={this.state.name} 

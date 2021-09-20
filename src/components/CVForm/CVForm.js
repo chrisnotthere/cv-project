@@ -11,10 +11,10 @@ class CVForm extends Component {
     //alert(`${this.props.name} ${this.props.description}`)
   }
 
-  handleGeneratePDF = (event) => {
-    //event.preventDefault();
-    alert(`Generate the PDF`)
-  }
+  // handleGeneratePDF = (event) => {
+  //   //event.preventDefault();
+  //   alert(`Generate the PDF`)
+  // }
 
   // handleReset = (event) => {
   //   //event.preventDefault();
@@ -48,7 +48,7 @@ class CVForm extends Component {
 
           <br/><br/><br/>
           <button type="submit" >Submit</button>
-          <button onClick={this.handleGeneratePDF} >Generate PDF</button>
+          <button onClick={this.props.handleGeneratePDF} >Generate PDF</button>
           <button onClick={this.props.handleReset} >Reset</button>
         </form>
       </div>

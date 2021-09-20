@@ -9,3 +9,23 @@ main {
   display: flex;
   justify-content: space-around;
 }
+
+/*  only show CVPreview when generatePDF button clicked  */
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+  .cv-preview,
+  .cv-preview * {
+    visibility: visible;
+  }
+  .cv-preview {
+    position: absolute;
+    /* left: 0; */
+    top: 0;
+  }
+}

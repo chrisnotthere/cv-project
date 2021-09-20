@@ -49,8 +49,8 @@ class Experience extends Component {
               Start Date
             </label>
             <input 
-              value={this.props.experienceStart} 
-              onChange={this.props.handleExperienceStartChange}
+              value={this.props.workStart} 
+              onChange={this.props.handleWorkStartChange}
               placeholder="Start Date" 
               type="text" 
               className="form-control" 
@@ -67,8 +67,8 @@ class Experience extends Component {
               End Date
             </label>
             <input 
-              value={this.props.experienceEnd} 
-              onChange={this.props.handleExperienceEndChange}
+              value={this.props.workEnd} 
+              onChange={this.props.handleWorkEndChange}
               placeholder="End Date" 
               type="text" 
               className="form-control" 

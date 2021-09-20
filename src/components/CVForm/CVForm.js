@@ -8,18 +8,7 @@ class CVForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    //alert(`${this.props.name} ${this.props.description}`)
   }
-
-  // handleGeneratePDF = (event) => {
-  //   //event.preventDefault();
-  //   alert(`Generate the PDF`)
-  // }
-
-  // handleReset = (event) => {
-  //   //event.preventDefault();
-  //   alert(`Reset the CV`)
-  // }
 
   render() {
     return (
@@ -27,21 +16,48 @@ class CVForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <Personal 
             name={this.props.name}
+            title={this.props.title}
+            phone={this.props.phone}
+            email={this.props.email}
+            location={this.props.location}
             description={this.props.description}
+
             handleNameChange={this.props.handleNameChange}
+            handleTitleChange={this.props.handleTitleChange}
+            handlePhoneChange={this.props.handlePhoneChange}
+            handleEmailChange={this.props.handleEmailChange}
+            handleLocationChange={this.props.handleLocationChange}
             handleDescriptionChange={this.props.handleDescriptionChange}
           />
           <Experience 
             company={this.props.company}
             position={this.props.position}
+            workStart={this.props.workStart}
+            workEnd={this.props.workEnd}
+            workDescription={this.props.workDescription}
+            course={this.props.course}
+            institution={this.props.institution}
+
             handleCompanyChange={this.props.handleCompanyChange}
             handlePositionChange={this.props.handlePositionChange}
+            handleWorkStartChange={this.props.handleWorkStartChange}
+            handleWorkEndChange={this.props.handleWorkEndChange}
+            handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
+
           />
           <Education 
             institution={this.props.institution}
             course={this.props.course}
+            educationStart={this.props.educationStart}
+            educationEnd={this.props.educationEnd}
+            educationDescription={this.props.educationDescription}
+
             handleInstitutionChange={this.props.handleInstitutionChange}
             handleCourseChange={this.props.handleCourseChange}
+            handleEducationStartChange={this.props.handleEducationStartChange}
+            handleEducationEndChange={this.props.handleEducationEndChange}
+            handleEducationDescriptionChange={this.props.handleEducationDescriptionChange}
+
           />
 
           <button type="submit" >Submit</button>

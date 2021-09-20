@@ -87,7 +87,7 @@ class Education extends Component {
             </label>
             <input 
               value={this.props.educationDescription}
-              onChange={this.props.educationDescriptionChange}
+              onChange={this.props.handleEducationDescriptionChange}
               placeholder="Description" 
               type="text" 
               className="form-control" 

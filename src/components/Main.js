@@ -10,17 +10,53 @@ class Main extends Component {
     // this is the default CV info, before the user enters any information
     this.state = {
       name: 'John Wick',
+      title: 'Software Developer',
+      phone: '250 555-0123',
+      email: 'JWick@gmail.com',
+      location: 'Vancouver, BC', 
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      
       company: 'Google',
       position: 'Junior Developer',
+      workStart: '2018',
+      workEnd: 'Present',
+      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation reprehenderit magna sit laboris est mollit.',
+      
+      course: 'CS50: Introduction to Computer Science',
       institution: 'Harvard University',
-      course: 'CS50: Introduction to Computer Science'
+      educationStart: '2016',
+      educationEnd: '2018',
+      educationDescription: 'blahblahblahblah...'
     }
   }
 
   handleNameChange = (event) => {
     this.setState({
       name: event.target.value
+    })
+  }
+
+  handleTitleChange = (event) => {
+    this.setState({
+      title: event.target.value
+    })
+  }
+
+  handlePhoneChange = (event) => {
+    this.setState({
+      phone: event.target.value
+    })
+  }
+
+  handleEmailChange = (event) => {
+    this.setState({
+      email: event.target.value
+    })
+  }
+
+  handleLocationChange = (event) => {
+    this.setState({
+      location: event.target.value
     })
   }
 
@@ -42,9 +78,21 @@ class Main extends Component {
     })
   }
 
-  handleInstitutionChange = (event) => {
+  handleWorkStartChange = (event) => {
     this.setState({
-      institution: event.target.value
+      workStart: event.target.value
+    })
+  }
+
+  handleWorkEndChange = (event) => {
+    this.setState({
+      workEnd: event.target.value
+    })
+  }
+
+  handleWorkDescriptionChange = (event) => {
+    this.setState({
+      workDescription: event.target.value
     })
   }
 
@@ -54,6 +102,31 @@ class Main extends Component {
     })
   }
 
+  handleInstitutionChange = (event) => {
+    this.setState({
+      institution: event.target.value
+    })
+  }
+
+  handleEducationStartChange = (event) => {
+    this.setState({
+      educationStart: event.target.value
+    })
+  }
+
+  handleEducationEndChange = (event) => {
+    this.setState({
+      educationEnd: event.target.value
+    })
+  }
+
+  handleEducationDescriptionChange = (event) => {
+    this.setState({
+      educationDescription: event.target.value
+    })
+  }
+
+
   // handleSubmit = (event) => {
   //   event.preventDefault();
   //   alert(`${this.state.name} ${this.state.description}`)
@@ -62,11 +135,23 @@ class Main extends Component {
   handleReset = event => {
     this.setState({
       name: 'John Wick',
+      title: 'Software Developer',
+      phone: '250 555-0123',
+      email: 'JWick@gmail.com',
+      location: 'Vancouver, BC', 
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      
       company: 'Google',
       position: 'Junior Developer',
+      workStart: '2018',
+      workEnd: 'Present',
+      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation reprehenderit magna sit laboris est mollit.',
+      
+      course: 'CS50: Introduction to Computer Science',
       institution: 'Harvard University',
-      course: 'CS50: Introduction to Computer Science'
+      educationStart: '2016',
+      educationEnd: '2018',
+      educationDescription: 'blahblahblahblah...'
     })
   }
 
@@ -80,18 +165,44 @@ class Main extends Component {
       <main>
         <CVForm 
           name={this.state.name}
+          title={this.state.title}
+          phone={this.state.phone}
+          email={this.state.email}
+          location={this.state.location}
           description={this.state.description}
+
           company={this.state.company}
           position={this.state.position}
-          institution={this.state.institution}
+          workStart={this.state.workStart}
+          workEnd={this.state.workEnd}
+          workDescription={this.state.workDescription}
+
           course={this.state.course}
+          institution={this.state.institution}
+          educationStart={this.state.educationStart}
+          educationEnd={this.state.educationEnd}
+          educationDescription={this.state.educationDescription}
+
 
           handleNameChange={this.handleNameChange.bind(this)}
+          handleTitleChange={this.handleTitleChange.bind(this)}
+          handlePhoneChange={this.handlePhoneChange.bind(this)}
+          handleEmailChange={this.handleEmailChange.bind(this)}
+          handleLocationChange={this.handleLocationChange.bind(this)}
           handleDescriptionChange={this.handleDescriptionChange.bind(this)}
+
           handleCompanyChange={this.handleCompanyChange.bind(this)}
           handlePositionChange={this.handlePositionChange.bind(this)}
-          handleInstitutionChange={this.handleInstitutionChange.bind(this)}
+          handleWorkStartChange={this.handleWorkStartChange.bind(this)}
+          handleWorkEndChange={this.handleWorkEndChange.bind(this)}
+          handleWorkDescriptionChange={this.handleWorkDescriptionChange.bind(this)}
+
           handleCourseChange={this.handleCourseChange.bind(this)}
+          handleInstitutionChange={this.handleInstitutionChange.bind(this)}
+          handleEducationStartChange={this.handleEducationStartChange.bind(this)}
+          handleEducationEndChange={this.handleEducationEndChange.bind(this)}
+          handleEducationDescriptionChange={this.handleEducationDescriptionChange.bind(this)}
+
           //HandleSubmit={() => this.handleSubmit()}
           handleReset={this.handleReset.bind(this)}
           handleGeneratePDF={this.handleGeneratePDF.bind(this)}

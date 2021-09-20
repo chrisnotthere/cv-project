@@ -1,5 +1,6 @@
 .CVPreview {
   /* background-color: blue; */
   border: green 1pt solid;
-  width: 49%;
+  max-width: 49%;
+  min-width: 49%;
 }

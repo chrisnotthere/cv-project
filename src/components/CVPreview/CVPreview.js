@@ -7,20 +7,42 @@ class CVPreview extends Component {
     return (
       <div className='cv-preview'>
         <h2>CVPreview</h2>
-        <br/>
         <div>
-          <br/><br/>
-          Name: {this.props.name}
-          <br/><br/>
-          description: {this.props.description}
-          <br/><br/>
-          Company: {this.props.company}
-          <br/><br/>
-          Position: {this.props.position}
-          <br/><br/>
-          Institution: {this.props.institution}
-          <br/><br/>
-          Course / Program: {this.props.course}
+
+          {this.props.name}
+          <br/>
+          {this.props.title}
+          <br/>
+          {this.props.phone}
+          <br/>
+          {this.props.email}
+          <br/>
+          {this.props.location}
+          <br/>
+          {this.props.description}
+          <br/>
+          {this.props.company}
+          <br/>
+          {this.props.position}
+          <br/>
+          {this.props.workStart}
+          <br/>
+          {this.props.workEnd}
+          <br/>
+          {this.props.workDescription}
+          <br/>
+          {this.props.course}
+          <br/>
+          {this.props.institution}
+          <br/>
+          {this.props.educationStart}
+          <br/>
+          {this.props.educationEnd}
+          <br/>
+          {this.props.educationDescription}
+          <br/>
+
+
         </div>
       </div>
     )

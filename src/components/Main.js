@@ -208,12 +208,24 @@ class Main extends Component {
           handleGeneratePDF={this.handleGeneratePDF.bind(this)}
         />
         <CVPreview 
-          name={this.state.name} 
+          name={this.state.name}
+          title={this.state.title}
+          phone={this.state.phone}
+          email={this.state.email}
+          location={this.state.location}
           description={this.state.description}
+
           company={this.state.company}
           position={this.state.position}
-          institution={this.state.institution}
+          workStart={this.state.workStart}
+          workEnd={this.state.workEnd}
+          workDescription={this.state.workDescription}
+
           course={this.state.course}
+          institution={this.state.institution}
+          educationStart={this.state.educationStart}
+          educationEnd={this.state.educationEnd}
+          educationDescription={this.state.educationDescription}
         />
       </main>
     )

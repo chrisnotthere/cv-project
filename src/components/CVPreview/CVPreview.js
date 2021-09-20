@@ -13,6 +13,14 @@ class CVPreview extends Component {
           Name: {this.props.name}
           <br/><br/>
           description: {this.props.description}
+          <br/><br/>
+          Company: {this.props.company}
+          <br/><br/>
+          Position: {this.props.position}
+          <br/><br/>
+          Institution: {this.props.institution}
+          <br/><br/>
+          Course / Program: {this.props.course}
         </div>
       </div>
     )

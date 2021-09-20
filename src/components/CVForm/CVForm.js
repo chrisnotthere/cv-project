@@ -1,56 +1,55 @@
 import '../../styles/CVForm.css';
 import React, {Component} from "react";
-
+import Personal from './Personal';
+import Experience from './Experience';
+import Education from './Education';
 
 class CVForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    alert(`${this.props.name} ${this.props.description}`)
+    //alert(`${this.props.name} ${this.props.description}`)
   }
+
+  handleGeneratePDF = (event) => {
+    //event.preventDefault();
+    alert(`Generate the PDF`)
+  }
+
+  // handleReset = (event) => {
+  //   //event.preventDefault();
+  //   alert(`Reset the CV`)
+  // }
 
   render() {
     return (
       <div className='CVForm'>
-        <p>Personal Details</p>
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label 
-              className="form-control-label" 
-              htmlFor="name">
-              Name
-            </label>
-            <input 
-              value={this.props.name} 
-              onChange={this.props.handleNameChange}
-              placeholder="Name" 
-              type="text" 
-              className="form-control" 
-              id="name" 
-              name="name" 
-              required
-            />
-          </div>
-          <br/><br/>
-          <div className="form-group">
-            <label 
-              className="form-control-label" 
-              htmlFor="description">
-              Description
-            </label>
-            <input 
-              value={this.props.description} 
-              onChange={this.props.handleDescriptionChange}
-              placeholder="Description" 
-              type="textarea" 
-              className="form-control" 
-              id="description" 
-              name="description" 
-              required
-            />
-          </div>
-          <br/><br/><br/><br/>
+          <Personal 
+            name={this.props.name}
+            description={this.props.description}
+            handleNameChange={this.props.handleNameChange}
+            handleDescriptionChange={this.props.handleDescriptionChange}
+          />
+          <br/>
+          <Experience 
+            company={this.props.company}
+            position={this.props.position}
+            handleCompanyChange={this.props.handleCompanyChange}
+            handlePositionChange={this.props.handlePositionChange}
+          />
+          <br/>
+          <Education 
+            institution={this.props.institution}
+            course={this.props.course}
+            handleInstitutionChange={this.props.handleInstitutionChange}
+            handleCourseChange={this.props.handleCourseChange}
+          />
+
+          <br/><br/><br/>
           <button type="submit" >Submit</button>
+          <button onClick={this.handleGeneratePDF} >Generate PDF</button>
+          <button onClick={this.props.handleReset} >Reset</button>
         </form>
       </div>
     )

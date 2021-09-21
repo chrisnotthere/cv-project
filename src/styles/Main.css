@@ -22,16 +22,13 @@ main {
   .cv-preview,
   .cv-preview * {
     visibility: visible;
+    -webkit-print-color-adjust: exact !important;
+    /* width: 100%; */
+    /* margin: auto; */
   }
   .cv-preview {
     position: absolute;
     /* left: 0; */
     top: 0;
   }
-
-  /* .cvheader {
-    font-size: 2rem;
-    background-color: blue;
-    padding: 1rem;
-  } */
 }

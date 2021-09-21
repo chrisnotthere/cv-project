@@ -79,23 +79,7 @@ class Education extends Component {
             />
           </div>
 
-          <div className="form-group-bottom">
-            <label 
-              className="form-control-label" 
-              htmlFor="description">
-              Description
-            </label>
-            <input 
-              value={this.props.educationDescription}
-              onChange={this.props.handleEducationDescriptionChange}
-              placeholder="Description" 
-              type="text" 
-              className="form-control" 
-              id="description" 
-              name="description" 
-              required
-            />
-          </div>
+          <br/>
           {/* <hr/> */}
       </div>
     )

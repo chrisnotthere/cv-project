@@ -26,7 +26,6 @@ class Main extends Component {
       institution: 'Harvard University',
       educationStart: '2016',
       educationEnd: '2018',
-      educationDescription: 'blahblahblahblah...'
     }
   }
 
@@ -120,11 +119,6 @@ class Main extends Component {
     })
   }
 
-  handleEducationDescriptionChange = (event) => {
-    this.setState({
-      educationDescription: event.target.value
-    })
-  }
 
   handleReset = event => {
     this.setState({
@@ -137,15 +131,14 @@ class Main extends Component {
       
       company: 'Google',
       position: 'Junior Developer',
-      workStart: '2018',
+      workStart: '2019',
       workEnd: 'Present',
-      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation reprehenderit magna sit laboris est mollit.',
+      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
       
       course: 'CS50: Introduction to Computer Science',
       institution: 'Harvard University',
       educationStart: '2016',
       educationEnd: '2018',
-      educationDescription: 'blahblahblahblah...'
     })
   }
 
@@ -175,7 +168,6 @@ class Main extends Component {
           institution={this.state.institution}
           educationStart={this.state.educationStart}
           educationEnd={this.state.educationEnd}
-          educationDescription={this.state.educationDescription}
 
           handleNameChange={this.handleNameChange.bind(this)}
           handleTitleChange={this.handleTitleChange.bind(this)}
@@ -194,7 +186,6 @@ class Main extends Component {
           handleInstitutionChange={this.handleInstitutionChange.bind(this)}
           handleEducationStartChange={this.handleEducationStartChange.bind(this)}
           handleEducationEndChange={this.handleEducationEndChange.bind(this)}
-          handleEducationDescriptionChange={this.handleEducationDescriptionChange.bind(this)}
 
           //HandleSubmit={() => this.handleSubmit()}
           handleReset={this.handleReset.bind(this)}
@@ -218,7 +209,7 @@ class Main extends Component {
           institution={this.state.institution}
           educationStart={this.state.educationStart}
           educationEnd={this.state.educationEnd}
-          educationDescription={this.state.educationDescription}
+          
         />
       </main>
     )

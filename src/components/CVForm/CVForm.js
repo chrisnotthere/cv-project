@@ -56,7 +56,6 @@ class CVForm extends Component {
             handleCourseChange={this.props.handleCourseChange}
             handleEducationStartChange={this.props.handleEducationStartChange}
             handleEducationEndChange={this.props.handleEducationEndChange}
-            handleEducationDescriptionChange={this.props.handleEducationDescriptionChange}
 
           />
           <div className='buttons'>

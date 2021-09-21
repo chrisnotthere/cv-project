@@ -6,7 +6,7 @@ class CVExperience extends Component {
     return (
       <>
         <div >
-          <p className="workExp">Work Experience</p>
+          {/* <p className="workExp">Work Experience</p> */}
           <div className="cv-experience">
             <div className="cv-experience-header">
               <div>

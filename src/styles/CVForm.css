@@ -37,3 +37,17 @@ label.form-control-label {
 button[type='submit'] {
   display: none;
 }
+
+.buttons {
+  text-align: center;
+}
+
+button.reset {
+  background-color: red;
+  color: white;
+}
+
+button.pdf {
+  background-color: green;
+  color: white;
+}

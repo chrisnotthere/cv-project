@@ -1,3 +1,7 @@
+/* .CVPreview * {
+  text-align: start;
+} */
+
 .CVPreview {
   /* background-color: blue; */
   border: green 1pt solid;
@@ -35,6 +39,10 @@
 .cv-experience-company {
   display: flex;
   flex-direction: row;
+  justify-content: start;
+  /* align-items: baseline; */
+  /* top: 0; */
+  /* position: absolute; */
 }
 
 .cv-experience-company * {

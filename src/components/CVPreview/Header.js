@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <>
-        <header className="cvheader">
+        <div className="cvheader">
           <div>
             <p className="name">{this.props.name}</p>
             <p className="title">{this.props.title}</p>
@@ -15,8 +15,7 @@ class Header extends Component {
             <p>{this.props.email}</p>
             <p>{this.props.location}</p>
           </div>
-        </header>
-        <hr/>
+        </div>
         <p>{this.props.description}</p>
         <hr/>
       </>

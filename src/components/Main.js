@@ -18,9 +18,9 @@ class Main extends Component {
       
       company: 'Google',
       position: 'Junior Developer',
-      workStart: '2018',
+      workStart: '2019',
       workEnd: 'Present',
-      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation reprehenderit magna sit laboris est mollit.',
+      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
       
       course: 'CS50: Introduction to Computer Science',
       institution: 'Harvard University',

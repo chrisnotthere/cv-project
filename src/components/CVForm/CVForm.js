@@ -59,10 +59,11 @@ class CVForm extends Component {
             handleEducationDescriptionChange={this.props.handleEducationDescriptionChange}
 
           />
-
-          <button type="submit" >Submit</button>
-          <button onClick={this.props.handleGeneratePDF} >Generate PDF</button>
-          <button onClick={this.props.handleReset} >Reset</button>
+          <div className='buttons'>
+            <button type="submit" >Submit</button>
+            <button className='pdf' onClick={this.props.handleGeneratePDF} >Generate PDF</button>
+            <button className='reset' onClick={this.props.handleReset} >Reset</button>
+          </div>
         </form>
       </div>
     )

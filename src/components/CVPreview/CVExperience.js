@@ -10,11 +10,11 @@ class CVExperience extends Component {
           <div className="cv-experience">
             <div className="cv-experience-header">
               <div>
-                <p className="name">{this.props.company}</p>
+                <p>{this.props.company}</p>
               </div>
               <div className="cv-experience-company">
-                <p className="position">{this.props.position}</p>
-                <p className="workEnd">{this.props.workStart} to {this.props.workEnd}</p>
+                <p>{this.props.position}</p>
+                <p>{`${this.props.workStart} - ${this.props.workEnd}`}</p>
               </div>
             </div>
             <div className="cv-experience-description">

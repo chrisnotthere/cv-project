@@ -33,6 +33,7 @@ class CVForm extends Component {
     );
 
     ReactDOM.render(expSection, section);
+    this.props.addWorkExp();
 
   }
 

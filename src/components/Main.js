@@ -70,35 +70,35 @@ class Main extends Component {
     })
   }
 
-  handleCompanyChange = (event, prevState) => {
+  handleCompanyChange = (event, index) => {
     let newWorkExp = [...this.state.workExp];
     let newCompany = event.target.value;
     newWorkExp[0].company = newCompany;
     this.setState({newWorkExp});
   }
 
-  handlePositionChange = (event) => {
+  handlePositionChange = (event, index) => {
     let newWorkExp = [...this.state.workExp];
     let newPosition = event.target.value;
     newWorkExp[0].position = newPosition;
     this.setState({newWorkExp});
   }
 
-  handleWorkStartChange = (event) => {
+  handleWorkStartChange = (event, index) => {
     let newWorkExp = [...this.state.workExp];
     let newWorkStart = event.target.value;
     newWorkExp[0].workStart = newWorkStart;
     this.setState({newWorkExp});
   }
 
-  handleWorkEndChange = (event) => {
+  handleWorkEndChange = (event, index) => {
     let newWorkExp = [...this.state.workExp];
     let newWorkEnd = event.target.value;
     newWorkExp[0].workEnd = newWorkEnd;
     this.setState({newWorkExp});
   }
 
-  handleWorkDescriptionChange = (event) => {
+  handleWorkDescriptionChange = (event, index) => {
     let newWorkExp = [...this.state.workExp];
     let newWorkDesc = event.target.value;
     newWorkExp[0].workDescription = newWorkDesc;
@@ -129,8 +129,19 @@ class Main extends Component {
     })
   }
 
+  //add new empty object to work experience array
   addWorkExp = () => {
-    alert('test');
+    //alert('adding new work exp...');
+
+    let newWorkExpObj = {
+      company: 'Testing...',
+      position: '',
+      workStart: '',
+      workEnd: '',
+      workDescription: '',
+    }
+
+    this.setState({workExp: [...this.state.workExp, newWorkExpObj]});
   }
 
 

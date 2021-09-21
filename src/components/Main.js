@@ -15,17 +15,22 @@ class Main extends Component {
       email: 'JWick@gmail.com',
       location: 'Vancouver, BC', 
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+
+      workExp: [{
+        company: 'Google',
+        position: 'Junior Developer',
+        workStart: '2019',
+        workEnd: 'Present',
+        workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
+      },],
       
-      company: 'Google',
-      position: 'Junior Developer',
-      workStart: '2019',
-      workEnd: 'Present',
-      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
-      
-      course: 'CS50: Introduction to Computer Science',
-      institution: 'Harvard University',
-      educationStart: '2016',
-      educationEnd: '2018',
+      education: [{
+        course: 'CS50: Introduction to Computer Science',
+        institution: 'Harvard University',
+        educationStart: '2016',
+        educationEnd: '2018',
+      },],
+
     }
   }
 
@@ -65,34 +70,39 @@ class Main extends Component {
     })
   }
 
-  handleCompanyChange = (event) => {
-    this.setState({
-      company: event.target.value
-    })
+  handleCompanyChange = (event, prevState) => {
+    let newWorkExp = [...this.state.workExp];
+    let newCompany = event.target.value;
+    newWorkExp[0].company = newCompany;
+    this.setState({newWorkExp});
   }
 
   handlePositionChange = (event) => {
-    this.setState({
-      position: event.target.value
-    })
+    let newWorkExp = [...this.state.workExp];
+    let newPosition = event.target.value;
+    newWorkExp[0].position = newPosition;
+    this.setState({newWorkExp});
   }
 
   handleWorkStartChange = (event) => {
-    this.setState({
-      workStart: event.target.value
-    })
+    let newWorkExp = [...this.state.workExp];
+    let newWorkStart = event.target.value;
+    newWorkExp[0].workStart = newWorkStart;
+    this.setState({newWorkExp});
   }
 
   handleWorkEndChange = (event) => {
-    this.setState({
-      workEnd: event.target.value
-    })
+    let newWorkExp = [...this.state.workExp];
+    let newWorkEnd = event.target.value;
+    newWorkExp[0].workEnd = newWorkEnd;
+    this.setState({newWorkExp});
   }
 
   handleWorkDescriptionChange = (event) => {
-    this.setState({
-      workDescription: event.target.value
-    })
+    let newWorkExp = [...this.state.workExp];
+    let newWorkDesc = event.target.value;
+    newWorkExp[0].workDescription = newWorkDesc;
+    this.setState({newWorkExp});
   }
 
   handleCourseChange = (event) => {
@@ -119,6 +129,10 @@ class Main extends Component {
     })
   }
 
+  addWorkExp = () => {
+    alert('test');
+  }
+
 
   handleReset = event => {
     this.setState({
@@ -128,17 +142,21 @@ class Main extends Component {
       email: 'JWick@gmail.com',
       location: 'Vancouver, BC', 
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+
+      workExp: [{
+        company: 'Google',
+        position: 'Junior Developer',
+        workStart: '2019',
+        workEnd: 'Present',
+        workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
+      },],
       
-      company: 'Google',
-      position: 'Junior Developer',
-      workStart: '2019',
-      workEnd: 'Present',
-      workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
-      
-      course: 'CS50: Introduction to Computer Science',
-      institution: 'Harvard University',
-      educationStart: '2016',
-      educationEnd: '2018',
+      education: [{
+        course: 'CS50: Introduction to Computer Science',
+        institution: 'Harvard University',
+        educationStart: '2016',
+        educationEnd: '2018',
+      },],
     })
   }
 
@@ -158,16 +176,16 @@ class Main extends Component {
           location={this.state.location}
           description={this.state.description}
 
-          company={this.state.company}
-          position={this.state.position}
-          workStart={this.state.workStart}
-          workEnd={this.state.workEnd}
-          workDescription={this.state.workDescription}
+          company={this.state.workExp[0].company}
+          position={this.state.workExp[0].position}
+          workStart={this.state.workExp[0].workStart}
+          workEnd={this.state.workExp[0].workEnd}
+          workDescription={this.state.workExp[0].workDescription}
 
-          course={this.state.course}
-          institution={this.state.institution}
-          educationStart={this.state.educationStart}
-          educationEnd={this.state.educationEnd}
+          course={this.state.education[0].course}
+          institution={this.state.education[0].institution}
+          educationStart={this.state.education[0].educationStart}
+          educationEnd={this.state.education[0].educationEnd}
 
           handleNameChange={this.handleNameChange.bind(this)}
           handleTitleChange={this.handleTitleChange.bind(this)}
@@ -190,6 +208,8 @@ class Main extends Component {
           //HandleSubmit={() => this.handleSubmit()}
           handleReset={this.handleReset.bind(this)}
           handleGeneratePDF={this.handleGeneratePDF.bind(this)}
+
+          addWorkExp={this.addWorkExp}
         />
         <CVPreview 
           name={this.state.name}
@@ -199,16 +219,16 @@ class Main extends Component {
           location={this.state.location}
           description={this.state.description}
 
-          company={this.state.company}
-          position={this.state.position}
-          workStart={this.state.workStart}
-          workEnd={this.state.workEnd}
-          workDescription={this.state.workDescription}
+          company={this.state.workExp[0].company}
+          position={this.state.workExp[0].position}
+          workStart={this.state.workExp[0].workStart}
+          workEnd={this.state.workExp[0].workEnd}
+          workDescription={this.state.workExp[0].workDescription}
 
-          course={this.state.course}
-          institution={this.state.institution}
-          educationStart={this.state.educationStart}
-          educationEnd={this.state.educationEnd}
+          course={this.state.education[0].course}
+          institution={this.state.education[0].institution}
+          educationStart={this.state.education[0].educationStart}
+          educationEnd={this.state.education[0].educationEnd}
           
         />
       </main>

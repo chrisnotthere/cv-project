@@ -5,7 +5,8 @@ class Experience extends Component {
   render() {
     return (
       <div className='experience'>
-          <p>Work Experience</p>
+          {/* <p>Work Experience <button>Add</button></p> */}
+          
           <div className="form-group">
             <label 
               className="form-control-label" 
@@ -96,6 +97,9 @@ class Experience extends Component {
             />
           </div>
           {/* <hr/> */}
+          <div className='buttons'>
+            <button >Delete</button>
+          </div>
       </div>
     )
   }

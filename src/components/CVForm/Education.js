@@ -5,7 +5,7 @@ class Education extends Component {
   render() {
     return (
       <div className='education'>
-          <p>Education</p>
+          {/* <p>Education</p> */}
 
           <div className="form-group">
             <label 

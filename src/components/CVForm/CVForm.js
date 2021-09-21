@@ -14,6 +14,7 @@ class CVForm extends Component {
     return (
       <div className='CVForm'>
         <form onSubmit={this.handleSubmit}>
+          <p>Personal Details</p>
           <Personal 
             name={this.props.name}
             title={this.props.title}
@@ -29,6 +30,7 @@ class CVForm extends Component {
             handleLocationChange={this.props.handleLocationChange}
             handleDescriptionChange={this.props.handleDescriptionChange}
           />
+          <p>Work Experience <button>Add</button></p>
           <Experience 
             company={this.props.company}
             position={this.props.position}
@@ -45,6 +47,7 @@ class CVForm extends Component {
             handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
 
           />
+          <p>Education <button>Add</button></p>
           <Education 
             institution={this.props.institution}
             course={this.props.course}

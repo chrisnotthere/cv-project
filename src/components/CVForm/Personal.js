@@ -5,7 +5,7 @@ class Personal extends Component {
   render() {
     return (
       <div className='personal'>
-          <p>Personal Details</p>
+          {/* <p>Personal Details</p> */}
 
           <div className="form-group">
             <label 

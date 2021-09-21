@@ -1,5 +1,6 @@
 import '../../styles/CVForm.css';
 import React, {Component} from "react";
+import ReactDOM from 'react-dom';
 import Personal from './Personal';
 import Experience from './Experience';
 import Education from './Education';
@@ -8,6 +9,31 @@ class CVForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+  }
+
+  addExpSection = () => {
+    const section = document.querySelector('#addExpDiv');
+
+    const expSection = (
+      <Experience 
+        company=''
+        position=''
+        workStart=''
+        workEnd=''
+        workDescription=''
+        course=''
+        institution=''
+
+        handleCompanyChange={this.props.handleCompanyChange}
+        handlePositionChange={this.props.handlePositionChange}
+        handleWorkStartChange={this.props.handleWorkStartChange}
+        handleWorkEndChange={this.props.handleWorkEndChange}
+        handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
+      />
+    );
+
+    ReactDOM.render(expSection, section);
+
   }
 
   render() {
@@ -30,7 +56,10 @@ class CVForm extends Component {
             handleLocationChange={this.props.handleLocationChange}
             handleDescriptionChange={this.props.handleDescriptionChange}
           />
-          <p>Work Experience <button>Add</button></p>
+
+          {/* <p>Work Experience <button onClick={this.props.addWorkExp}>Add</button></p> */}
+          <p>Work Experience <button onClick={this.addExpSection}>Add</button></p>
+
           <Experience 
             company={this.props.company}
             position={this.props.position}
@@ -45,8 +74,9 @@ class CVForm extends Component {
             handleWorkStartChange={this.props.handleWorkStartChange}
             handleWorkEndChange={this.props.handleWorkEndChange}
             handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
-
           />
+          <div id='addExpDiv'></div>
+          
           <p>Education <button>Add</button></p>
           <Education 
             institution={this.props.institution}

@@ -39,7 +39,7 @@
 .cv-experience-company {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   /* align-items: baseline; */
   /* top: 0; */
   /* position: absolute; */

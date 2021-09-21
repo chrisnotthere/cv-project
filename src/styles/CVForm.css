@@ -51,3 +51,7 @@ button.pdf {
   background-color: green;
   color: white;
 }
+
+.delete-btn {
+  text-align: center;
+}

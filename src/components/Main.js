@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import '../styles/Main.css';
 import React, {Component} from "react";
 import CVForm from './CVForm/CVForm';
@@ -37,40 +38,45 @@ class Main extends Component {
     }
   }
 
-  handleNameChange = (event) => {
-    this.setState({
-      name: event.target.value
-    })
-  }
-
-  handleTitleChange = (event) => {
-    this.setState({
-      title: event.target.value
-    })
-  }
-
-  handlePhoneChange = (event) => {
-    this.setState({
-      phone: event.target.value
-    })
-  }
-
-  handleEmailChange = (event) => {
-    this.setState({
-      email: event.target.value
-    })
-  }
-
-  handleLocationChange = (event) => {
-    this.setState({
-      location: event.target.value
-    })
-  }
-
-  handleDescriptionChange = (event) => {
-    this.setState({
-      description: event.target.value
-    })
+  handlePersonalChange = (event, field) => {
+    switch (field) {
+      case 'name': {
+        this.setState({
+          name: event.target.value
+        })
+        break;
+      }
+      case 'title': {
+        this.setState({
+          title: event.target.value
+        })
+        break;
+      }
+      case 'phone': {
+        this.setState({
+          phone: event.target.value
+        })
+        break;
+      }
+      case 'email': {
+        this.setState({
+          email: event.target.value
+        })
+        break;
+      }
+      case 'location': {
+        this.setState({
+          location: event.target.value
+        })
+        break;
+      }
+      case 'description': {
+        this.setState({
+          description: event.target.value
+        })
+        break;
+      }
+    }
   }
 
   //changed so it now uses an index
@@ -135,7 +141,6 @@ class Main extends Component {
 
   //add new empty object to work experience array
   addWorkExp = () => {
-    //alert('adding new work exp...');
 
     let newWorkExpObj = {
       id: uniqid(),
@@ -195,7 +200,6 @@ class Main extends Component {
           description={this.state.description}
 
           company={this.state.workExp[0].company}
-          // company1={this.state.workExp[1].company}
           position={this.state.workExp[0].position}
           workStart={this.state.workExp[0].workStart}
           workEnd={this.state.workExp[0].workEnd}
@@ -206,12 +210,7 @@ class Main extends Component {
           educationStart={this.state.education[0].educationStart}
           educationEnd={this.state.education[0].educationEnd}
 
-          handleNameChange={this.handleNameChange.bind(this)}
-          handleTitleChange={this.handleTitleChange.bind(this)}
-          handlePhoneChange={this.handlePhoneChange.bind(this)}
-          handleEmailChange={this.handleEmailChange.bind(this)}
-          handleLocationChange={this.handleLocationChange.bind(this)}
-          handleDescriptionChange={this.handleDescriptionChange.bind(this)}
+          handlePersonalChange={this.handlePersonalChange.bind(this)}
 
           handleCompanyChange={this.handleCompanyChange.bind(this)}
           handlePositionChange={this.handlePositionChange.bind(this)}

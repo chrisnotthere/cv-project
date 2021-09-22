@@ -5,7 +5,6 @@ class Personal extends Component {
   render() {
     return (
       <div className='personal'>
-          {/* <p>Personal Details</p> */}
 
           <div className="form-group">
             <label 
@@ -15,7 +14,7 @@ class Personal extends Component {
             </label>
             <input 
               value={this.props.name} 
-              onChange={this.props.handleNameChange}
+              onChange={(e) => this.props.handlePersonalChange(e, 'name')}
               placeholder="Name" 
               type="text" 
               className="form-control" 
@@ -33,7 +32,7 @@ class Personal extends Component {
             </label>
             <input 
               value={this.props.title} 
-              onChange={this.props.handleTitleChange}
+              onChange={(e) => this.props.handlePersonalChange(e, 'title')}
               placeholder="Title" 
               type="text" 
               className="form-control" 
@@ -51,7 +50,7 @@ class Personal extends Component {
             </label>
             <input 
               value={this.props.phone} 
-              onChange={this.props.handlePhoneChange}
+              onChange={(e) => this.props.handlePersonalChange(e, 'phone')}
               placeholder="Phone" 
               type="text" 
               className="form-control" 
@@ -69,7 +68,7 @@ class Personal extends Component {
             </label>
             <input 
               value={this.props.email} 
-              onChange={this.props.handleEmailChange}
+              onChange={(e) => this.props.handlePersonalChange(e, 'email')}
               placeholder="Email" 
               type="text" 
               className="form-control" 
@@ -87,7 +86,7 @@ class Personal extends Component {
             </label>
             <input 
               value={this.props.location} 
-              onChange={this.props.handleLocationChange}
+              onChange={(e) => this.props.handlePersonalChange(e, 'location')}
               placeholder="Location" 
               type="text" 
               className="form-control" 
@@ -105,7 +104,7 @@ class Personal extends Component {
             </label>
             <input 
               value={this.props.description} 
-              onChange={this.props.handleDescriptionChange}
+              onChange={(e) => this.props.handlePersonalChange(e, 'description')}
               placeholder="Description..." 
               type="text" 
               className="form-control" 
@@ -114,7 +113,6 @@ class Personal extends Component {
               required
             />
           </div>
-          {/* <hr/> */}
       </div>
     )
   }

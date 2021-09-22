@@ -16,7 +16,7 @@ class CVForm extends Component {
 
     const expSection = (
       <Experience 
-        company='plpl'
+        company='some company'
         position=''
         workStart=''
         workEnd=''
@@ -50,12 +50,7 @@ class CVForm extends Component {
             location={this.props.location}
             description={this.props.description}
 
-            handleNameChange={this.props.handleNameChange}
-            handleTitleChange={this.props.handleTitleChange}
-            handlePhoneChange={this.props.handlePhoneChange}
-            handleEmailChange={this.props.handleEmailChange}
-            handleLocationChange={this.props.handleLocationChange}
-            handleDescriptionChange={this.props.handleDescriptionChange}
+            handlePersonalChange={this.props.handlePersonalChange}
           />
 
           {/* <p>Work Experience <button onClick={this.props.addWorkExp}>Add</button></p> */}

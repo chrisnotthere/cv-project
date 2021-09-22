@@ -1,7 +1,7 @@
 import '../../styles/CVPreview.css';
 import React, {Component} from "react";
 import Header from './Header';
-import CVExperience from './CVExperience'
+import CVExperience from './CVExperience';
 import CVEducation from './CVEducation';
 
 class CVPreview extends Component {
@@ -26,6 +26,7 @@ class CVPreview extends Component {
           workEnd={this.props.workEnd}
           workDescription={this.props.workDescription}
         />
+        <div className="add-exp-area"></div>
         <p className="section-header">Education</p>
         <CVEducation
           course={this.props.course}

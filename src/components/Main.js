@@ -70,10 +70,11 @@ class Main extends Component {
     })
   }
 
+  //changed so it now uses an index
   handleCompanyChange = (event, index) => {
     let newWorkExp = [...this.state.workExp];
     let newCompany = event.target.value;
-    newWorkExp[0].company = newCompany;
+    newWorkExp[index].company = newCompany;
     this.setState({newWorkExp});
   }
 
@@ -188,6 +189,7 @@ class Main extends Component {
           description={this.state.description}
 
           company={this.state.workExp[0].company}
+          // company1={this.state.workExp[1].company}
           position={this.state.workExp[0].position}
           workStart={this.state.workExp[0].workStart}
           workEnd={this.state.workExp[0].workEnd}

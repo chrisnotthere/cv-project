@@ -15,7 +15,7 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.company} 
-              onChange={this.props.handleCompanyChange}
+              onChange={(e) => this.props.handleCompanyChange(e, 0)}
               placeholder="Company" 
               type="text" 
               className="form-control" 

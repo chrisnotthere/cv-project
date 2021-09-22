@@ -16,7 +16,7 @@ class CVForm extends Component {
 
     const expSection = (
       <Experience 
-        company=''
+        company='plpl'
         position=''
         workStart=''
         workEnd=''
@@ -24,7 +24,7 @@ class CVForm extends Component {
         course=''
         institution=''
 
-        handleCompanyChange={this.props.handleCompanyChange}
+        handleCompanyChange={(e) => this.props.handleCompanyChange(e, 1)}
         handlePositionChange={this.props.handlePositionChange}
         handleWorkStartChange={this.props.handleWorkStartChange}
         handleWorkEndChange={this.props.handleWorkEndChange}

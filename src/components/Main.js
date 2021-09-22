@@ -81,31 +81,36 @@ class Main extends Component {
 
   handleExperienceChange = (event, field, id) => {
 
-    let newWorkExp = [...this.state.workExp];
+    //find the correct workExp obj by using the id
+    let prevState = [...this.state.workExp];
+    let newWorkExp = prevState.find((exp) => exp.id === id);
+
+    //let newWorkExp = [...this.state.workExp];
+    console.log(id);
 
     switch (field) {
       case 'company': {
-        newWorkExp[0].company = event.target.value;
+        newWorkExp.company = event.target.value;
         this.setState({newWorkExp});
         break;
       }
       case 'position': {
-        newWorkExp[0].position = event.target.value;
+        newWorkExp.position = event.target.value;
         this.setState({newWorkExp});
         break;
       }
       case 'workStart': {
-        newWorkExp[0].workStart = event.target.value;
+        newWorkExp.workStart = event.target.value;
         this.setState({newWorkExp});
         break;
       }
       case 'workEnd': {
-        newWorkExp[0].workEnd = event.target.value;
+        newWorkExp.workEnd = event.target.value;
         this.setState({newWorkExp});
         break;
       }
       case 'workDescription': {
-        newWorkExp[0].workDescription = event.target.value;
+        newWorkExp.workDescription = event.target.value;
         this.setState({newWorkExp});
         break;
       }
@@ -208,6 +213,7 @@ class Main extends Component {
           location={this.state.location}
           description={this.state.description}
 
+          id={this.state.workExp[0].id}
           company={this.state.workExp[0].company}
           position={this.state.workExp[0].position}
           workStart={this.state.workExp[0].workStart}

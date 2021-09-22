@@ -14,7 +14,7 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.company} 
-              onChange={(e) => this.props.handleExperienceChange(e, 'company')}
+              onChange={(e) => this.props.handleExperienceChange(e, 'company', this.props.id)}
               placeholder="Company" 
               type="text" 
               className="form-control" 
@@ -32,7 +32,8 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.position} 
-              onChange={(e) => this.props.handleExperienceChange(e, 'position')}              placeholder="Position" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'position', this.props.id)}              
+              placeholder="Position" 
               type="text" 
               className="form-control" 
               id="position" 
@@ -49,7 +50,8 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.workStart} 
-              onChange={(e) => this.props.handleExperienceChange(e, 'workStart')}              placeholder="Start Date" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'workStart', this.props.id)}              
+              placeholder="Start Date" 
               type="text" 
               className="form-control" 
               id="start" 
@@ -66,7 +68,8 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.workEnd} 
-              onChange={(e) => this.props.handleExperienceChange(e, 'workEnd')}              placeholder="End Date" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'workEnd', this.props.id)}              
+              placeholder="End Date" 
               type="text" 
               className="form-control" 
               id="end" 
@@ -83,7 +86,8 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.workDescription}
-              onChange={(e) => this.props.handleExperienceChange(e, 'workDescription')}              placeholder="Description" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'workDescription', this.props.id)}              
+              placeholder="Description" 
               type="text" 
               className="form-control" 
               id="description" 

@@ -1,9 +1,11 @@
 /* eslint-disable default-case */
 import '../styles/Main.css';
 import React, {Component} from "react";
+import ReactDOM from 'react-dom';
 import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
 import uniqid from 'uniqid';
+import Experience from './CVForm/Experience';
 
 class Main extends Component {
   constructor(props) {
@@ -156,9 +158,10 @@ class Main extends Component {
   //add new empty object to work experience array
   addWorkExp = () => {
 
+    let newId = uniqid();
     let newWorkExpObj = {
-      id: uniqid(),
-      company: 'Testing...',
+      id: newId,
+      company: 'some company',
       position: '',
       workStart: '',
       workEnd: '',
@@ -166,6 +169,32 @@ class Main extends Component {
     }
 
     this.setState({workExp: [...this.state.workExp, newWorkExpObj]});
+    
+
+    setTimeout(this.renderWorkExp.bind(this), 500);
+    
+    //this.renderWorkExp();
+  }
+
+  renderWorkExp = () => {
+    /////////////////taken from method in CVForm
+
+    const section = document.querySelector('#addExpDiv');
+
+    const expSection = (
+      <Experience 
+        id={this.state.workExp[1].id}
+        company={this.state.workExp[1].company}
+        position={this.state.workExp[1].position}
+        workStart={this.state.workExp[1].workStart}
+        workEnd={this.state.workExp[1].workEnd}
+        workDescription={this.state.workExp[1].workDescription}
+
+        handleExperienceChange={this.handleExperienceChange.bind(this)}
+      />
+    );
+
+    ReactDOM.render(expSection, section);
   }
 
 

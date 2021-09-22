@@ -1,6 +1,6 @@
 import '../../styles/CVForm.css';
 import React, {Component} from "react";
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import Personal from './Personal';
 import Experience from './Experience';
 import Education from './Education';
@@ -11,34 +11,29 @@ class CVForm extends Component {
     event.preventDefault();
   }
 
-  addExpSection = () => {
-    const section = document.querySelector('#addExpDiv');
+  // addExpSection = () => {
+  //   const section = document.querySelector('#addExpDiv');
 
-    const expSection = (
-      <Experience 
-        id=''
-        company='some company'
-        position=''
-        workStart=''
-        workEnd=''
-        workDescription=''
-        course=''
-        institution=''
+  //   const expSection = (
+  //     <Experience 
+  //       id=''
+  //       company='some company'
+  //       position=''
+  //       workStart=''
+  //       workEnd=''
+  //       workDescription=''
+  //       course=''
+  //       institution=''
 
-        handleExperienceChange={this.props.handleExperienceChange}
+  //       handleExperienceChange={this.props.handleExperienceChange}
 
-        // handleCompanyChange={(e) => this.props.handleCompanyChange(e, 1)}
-        // handlePositionChange={this.props.handlePositionChange}
-        // handleWorkStartChange={this.props.handleWorkStartChange}
-        // handleWorkEndChange={this.props.handleWorkEndChange}
-        // handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
-      />
-    );
+  //     />
+  //   );
 
-    ReactDOM.render(expSection, section);
-    this.props.addWorkExp();
+  //   ReactDOM.render(expSection, section);
+  //   this.props.addWorkExp();
 
-  }
+  // }
 
   render() {
     return (
@@ -56,8 +51,8 @@ class CVForm extends Component {
             handlePersonalChange={this.props.handlePersonalChange}
           />
 
-          {/* <p>Work Experience <button onClick={this.props.addWorkExp}>Add</button></p> */}
-          <p>Work Experience <button onClick={this.addExpSection}>Add</button></p>
+          <p>Work Experience <button onClick={this.props.addWorkExp}>Add</button></p>
+          {/* <p>Work Experience <button onClick={this.addExpSection}>Add</button></p> */}
 
           <Experience 
             id={this.props.id}

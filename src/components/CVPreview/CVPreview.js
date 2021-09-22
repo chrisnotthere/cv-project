@@ -19,6 +19,7 @@ class CVPreview extends Component {
         />
         <p className="section-header">Work Experience</p>
         <CVExperience
+          id={this.props.id}
           company={this.props.company}
           position={this.props.position}
           workStart={this.props.workStart}

@@ -24,11 +24,13 @@ class CVForm extends Component {
         course=''
         institution=''
 
-        handleCompanyChange={(e) => this.props.handleCompanyChange(e, 1)}
-        handlePositionChange={this.props.handlePositionChange}
-        handleWorkStartChange={this.props.handleWorkStartChange}
-        handleWorkEndChange={this.props.handleWorkEndChange}
-        handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
+        handleExperienceChange={this.props.handleExperienceChange}
+
+        // handleCompanyChange={(e) => this.props.handleCompanyChange(e, 1)}
+        // handlePositionChange={this.props.handlePositionChange}
+        // handleWorkStartChange={this.props.handleWorkStartChange}
+        // handleWorkEndChange={this.props.handleWorkEndChange}
+        // handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
       />
     );
 
@@ -65,11 +67,8 @@ class CVForm extends Component {
             course={this.props.course}
             institution={this.props.institution}
 
-            handleCompanyChange={this.props.handleCompanyChange}
-            handlePositionChange={this.props.handlePositionChange}
-            handleWorkStartChange={this.props.handleWorkStartChange}
-            handleWorkEndChange={this.props.handleWorkEndChange}
-            handleWorkDescriptionChange={this.props.handleWorkDescriptionChange}
+            handleExperienceChange={this.props.handleExperienceChange}
+
           />
           <div id='addExpDiv'></div>
           

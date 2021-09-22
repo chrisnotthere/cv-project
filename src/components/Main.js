@@ -79,41 +79,50 @@ class Main extends Component {
     }
   }
 
-  //changed so it now uses an index
-  handleCompanyChange = (event, index) => {
+  handleExperienceChange = (event, field, id) => {
+
     let newWorkExp = [...this.state.workExp];
-    let newCompany = event.target.value;
-    newWorkExp[index].company = newCompany;
-    this.setState({newWorkExp});
+
+    switch (field) {
+      case 'company': {
+        newWorkExp[0].company = event.target.value;
+        this.setState({newWorkExp});
+        break;
+      }
+      case 'position': {
+        newWorkExp[0].position = event.target.value;
+        this.setState({newWorkExp});
+        break;
+      }
+      case 'workStart': {
+        newWorkExp[0].workStart = event.target.value;
+        this.setState({newWorkExp});
+        break;
+      }
+      case 'workEnd': {
+        newWorkExp[0].workEnd = event.target.value;
+        this.setState({newWorkExp});
+        break;
+      }
+      case 'workDescription': {
+        newWorkExp[0].workDescription = event.target.value;
+        this.setState({newWorkExp});
+        break;
+      }
+
+    }
+
+
   }
 
-  handlePositionChange = (event, index) => {
-    let newWorkExp = [...this.state.workExp];
-    let newPosition = event.target.value;
-    newWorkExp[0].position = newPosition;
-    this.setState({newWorkExp});
-  }
-
-  handleWorkStartChange = (event, index) => {
-    let newWorkExp = [...this.state.workExp];
-    let newWorkStart = event.target.value;
-    newWorkExp[0].workStart = newWorkStart;
-    this.setState({newWorkExp});
-  }
-
-  handleWorkEndChange = (event, index) => {
-    let newWorkExp = [...this.state.workExp];
-    let newWorkEnd = event.target.value;
-    newWorkExp[0].workEnd = newWorkEnd;
-    this.setState({newWorkExp});
-  }
-
-  handleWorkDescriptionChange = (event, index) => {
-    let newWorkExp = [...this.state.workExp];
-    let newWorkDesc = event.target.value;
-    newWorkExp[0].workDescription = newWorkDesc;
-    this.setState({newWorkExp});
-  }
+  /////old handler, keep incase new one breaks
+  // handleCompanyChange = (event, index) => {
+  //   let newWorkExp = [...this.state.workExp];
+  //   let newCompany = event.target.value;
+  //   newWorkExp[index].company = newCompany;
+  //   this.setState({newWorkExp});
+  // }
+  
 
   handleCourseChange = (event) => {
     this.setState({
@@ -211,12 +220,7 @@ class Main extends Component {
           educationEnd={this.state.education[0].educationEnd}
 
           handlePersonalChange={this.handlePersonalChange.bind(this)}
-
-          handleCompanyChange={this.handleCompanyChange.bind(this)}
-          handlePositionChange={this.handlePositionChange.bind(this)}
-          handleWorkStartChange={this.handleWorkStartChange.bind(this)}
-          handleWorkEndChange={this.handleWorkEndChange.bind(this)}
-          handleWorkDescriptionChange={this.handleWorkDescriptionChange.bind(this)}
+          handleExperienceChange={this.handleExperienceChange.bind(this)}
 
           handleCourseChange={this.handleCourseChange.bind(this)}
           handleInstitutionChange={this.handleInstitutionChange.bind(this)}
@@ -237,6 +241,7 @@ class Main extends Component {
           location={this.state.location}
           description={this.state.description}
 
+          id={this.state.workExp[0].id}
           company={this.state.workExp[0].company}
           position={this.state.workExp[0].position}
           workStart={this.state.workExp[0].workStart}

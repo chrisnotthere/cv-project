@@ -5,7 +5,6 @@ class Experience extends Component {
   render() {
     return (
       <div className='experience'>
-          {/* <p>Work Experience <button>Add</button></p> */}
           
           <div className="form-group">
             <label 
@@ -15,7 +14,7 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.company} 
-              onChange={(e) => this.props.handleCompanyChange(e, 0)}
+              onChange={(e) => this.props.handleExperienceChange(e, 'company')}
               placeholder="Company" 
               type="text" 
               className="form-control" 
@@ -33,8 +32,7 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.position} 
-              onChange={this.props.handlePositionChange}
-              placeholder="Position" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'position')}              placeholder="Position" 
               type="text" 
               className="form-control" 
               id="position" 
@@ -51,8 +49,7 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.workStart} 
-              onChange={this.props.handleWorkStartChange}
-              placeholder="Start Date" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'workStart')}              placeholder="Start Date" 
               type="text" 
               className="form-control" 
               id="start" 
@@ -69,8 +66,7 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.workEnd} 
-              onChange={this.props.handleWorkEndChange}
-              placeholder="End Date" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'workEnd')}              placeholder="End Date" 
               type="text" 
               className="form-control" 
               id="end" 
@@ -87,8 +83,7 @@ class Experience extends Component {
             </label>
             <input 
               value={this.props.workDescription}
-              onChange={this.props.handleWorkDescriptionChange}
-              placeholder="Description" 
+              onChange={(e) => this.props.handleExperienceChange(e, 'workDescription')}              placeholder="Description" 
               type="text" 
               className="form-control" 
               id="description" 
@@ -96,7 +91,7 @@ class Experience extends Component {
               required
             />
           </div>
-          {/* <hr/> */}
+
           <div className='buttons'>
             <button >Delete</button>
           </div>

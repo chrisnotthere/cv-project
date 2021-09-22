@@ -7,9 +7,7 @@ class Experience extends Component {
       <div className='experience'>
           
           <div className="form-group">
-            <label 
-              className="form-control-label" 
-              htmlFor="company">
+            <label className="form-control-label" >
               Company
             </label>
             <input 
@@ -18,16 +16,12 @@ class Experience extends Component {
               placeholder="Company" 
               type="text" 
               className="form-control" 
-              id="company" 
-              name="company" 
               required
             />
           </div>
 
           <div className="form-group">
-            <label 
-              className="form-control-label" 
-              htmlFor="position">
+            <label className="form-control-label">
               Position
             </label>
             <input 
@@ -36,16 +30,12 @@ class Experience extends Component {
               placeholder="Position" 
               type="text" 
               className="form-control" 
-              id="position" 
-              name="position" 
               required
             />
           </div>
 
           <div className="form-group">
-            <label 
-              className="form-control-label" 
-              htmlFor="start">
+            <label className="form-control-label">
               Start Date
             </label>
             <input 
@@ -54,16 +44,12 @@ class Experience extends Component {
               placeholder="Start Date" 
               type="text" 
               className="form-control" 
-              id="start" 
-              name="start" 
               required
             />
           </div>
 
           <div className="form-group">
-            <label 
-              className="form-control-label" 
-              htmlFor="end">
+            <label className="form-control-label">
               End Date
             </label>
             <input 
@@ -72,16 +58,12 @@ class Experience extends Component {
               placeholder="End Date" 
               type="text" 
               className="form-control" 
-              id="end" 
-              name="end" 
               required
             />
           </div>
 
           <div className="form-group-bottom">
-            <label 
-              className="form-control-label" 
-              htmlFor="description">
+            <label className="form-control-label">
               Description
             </label>
             <input 
@@ -90,8 +72,6 @@ class Experience extends Component {
               placeholder="Description" 
               type="text" 
               className="form-control" 
-              id="description" 
-              name="description" 
               required
             />
           </div>

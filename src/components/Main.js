@@ -2,6 +2,7 @@ import '../styles/Main.css';
 import React, {Component} from "react";
 import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
+import uniqid from 'uniqid';
 
 class Main extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Main extends Component {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 
       workExp: [{
+        id: uniqid(),
         company: 'Google',
         position: 'Junior Developer',
         workStart: '2019',
@@ -25,6 +27,7 @@ class Main extends Component {
       },],
       
       education: [{
+        id: uniqid(),
         course: 'CS50: Introduction to Computer Science',
         institution: 'Harvard University',
         educationStart: '2016',
@@ -135,6 +138,7 @@ class Main extends Component {
     //alert('adding new work exp...');
 
     let newWorkExpObj = {
+      id: uniqid(),
       company: 'Testing...',
       position: '',
       workStart: '',
@@ -156,6 +160,7 @@ class Main extends Component {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 
       workExp: [{
+        id: uniqid(),
         company: 'Google',
         position: 'Junior Developer',
         workStart: '2019',
@@ -164,6 +169,7 @@ class Main extends Component {
       },],
       
       education: [{
+        id: uniqid(),
         course: 'CS50: Introduction to Computer Science',
         institution: 'Harvard University',
         educationStart: '2016',

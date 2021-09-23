@@ -2,10 +2,10 @@
   text-align: start;
 } */
 
-.CVPreview {
+.cv-preview {
   /* background-color: blue; */
   border: green 1pt solid;
-  max-width: 49%;
+  /* max-width: 49%; */
   min-width: 49%;
 }
 
@@ -27,7 +27,7 @@
 .cv-experience {
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
 }
 
 .cv-experience-header {
@@ -52,5 +52,5 @@
 .edu-item {
   display: flex;
   justify-content: space-between;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
 }

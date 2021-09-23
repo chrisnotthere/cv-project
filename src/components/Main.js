@@ -176,6 +176,26 @@ class Main extends Component {
     this.setState({workExp: [...newWorkExp]});
   }
 
+  addEducation = () => {
+
+    let newId = uniqid();
+    let newEduObj = {
+      id: newId,
+      course: 'Some company',
+      institution: 'My position',
+      educationStart: '2015',
+      educationEnd: '2019',
+    }
+
+    this.setState({education: [...this.state.education, newEduObj]});
+    
+  }
+
+  removeEducation = (event, id) => {
+    let newEdu = this.state.education.filter(exp => exp.id !== id)
+    this.setState({education: [...newEdu]});
+  }
+
 
 
   handleReset = event => {
@@ -200,13 +220,14 @@ class Main extends Component {
           description={this.state.description}
 
           workExp={this.state.workExp}
+          education={this.state.education}
 
-          id={this.state.workExp[0].id}
-          company={this.state.workExp[0].company}
-          position={this.state.workExp[0].position}
-          workStart={this.state.workExp[0].workStart}
-          workEnd={this.state.workExp[0].workEnd}
-          workDescription={this.state.workExp[0].workDescription}
+          // id={this.state.workExp[0].id}
+          // company={this.state.workExp[0].company}
+          // position={this.state.workExp[0].position}
+          // workStart={this.state.workExp[0].workStart}
+          // workEnd={this.state.workExp[0].workEnd}
+          // workDescription={this.state.workExp[0].workDescription}
 
           course={this.state.education[0].course}
           institution={this.state.education[0].institution}
@@ -227,6 +248,8 @@ class Main extends Component {
 
           addWorkExp={this.addWorkExp}
           removeWorkExp={this.removeWorkExp.bind(this)}
+          addEducation={this.addEducation}
+          removeEducation={this.removeEducation.bind(this)}
         />
         <CVPreview 
           name={this.state.name}
@@ -237,13 +260,14 @@ class Main extends Component {
           description={this.state.description}
 
           workExp={this.state.workExp}
+          education={this.state.education}
 
-          id={this.state.workExp[0].id}
-          company={this.state.workExp[0].company}
-          position={this.state.workExp[0].position}
-          workStart={this.state.workExp[0].workStart}
-          workEnd={this.state.workExp[0].workEnd}
-          workDescription={this.state.workExp[0].workDescription}
+          // id={this.state.workExp[0].id}
+          // company={this.state.workExp[0].company}
+          // position={this.state.workExp[0].position}
+          // workStart={this.state.workExp[0].workStart}
+          // workEnd={this.state.workExp[0].workEnd}
+          // workDescription={this.state.workExp[0].workDescription}
 
           course={this.state.education[0].course}
           institution={this.state.education[0].institution}

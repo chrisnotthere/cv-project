@@ -44,24 +44,27 @@ class CVForm extends Component {
               removeWorkExp={this.props.removeWorkExp}
           />
           ))}
-
-
-          <div id='addExpDiv'></div>
           
-          <p>Education <button>Add</button></p>
-          <Education 
-            institution={this.props.institution}
-            course={this.props.course}
-            educationStart={this.props.educationStart}
-            educationEnd={this.props.educationEnd}
-            educationDescription={this.props.educationDescription}
+          <p>Education <button onClick={this.props.addEducation}>Add</button></p>
 
-            handleInstitutionChange={this.props.handleInstitutionChange}
-            handleCourseChange={this.props.handleCourseChange}
-            handleEducationStartChange={this.props.handleEducationStartChange}
-            handleEducationEndChange={this.props.handleEducationEndChange}
+          {this.props.education.map(education => (
+            <Education 
+              key={education.id}
+              id={education.id}
+              institution={education.institution}
+              course={education.course}
+              educationStart={education.educationStart}
+              educationEnd={education.educationEnd}
+              educationDescription={education.educationDescription}
 
-          />
+              handleInstitutionChange={education.handleInstitutionChange}
+              handleCourseChange={education.handleCourseChange}
+              handleEducationStartChange={education.handleEducationStartChange}
+              handleEducationEndChange={education.handleEducationEndChange}
+              removeEducation={this.props.removeEducation}
+            />
+          ))}
+
           <div className='buttons'>
             <button type="submit" >Submit</button>
             <button className='pdf' onClick={this.props.handleGeneratePDF} >Generate PDF</button>

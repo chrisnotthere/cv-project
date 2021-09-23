@@ -79,6 +79,10 @@ class Education extends Component {
             />
           </div>
 
+          <div className='buttons'>
+            <button onClick={(e) => this.props.removeEducation(e, this.props.id)}>Delete</button>
+          </div>
+
           <br/>
           {/* <hr/> */}
       </div>

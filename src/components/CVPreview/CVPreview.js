@@ -33,12 +33,23 @@ class CVPreview extends Component {
         ))}
 
         <p className="section-header">Education</p>
-        <CVEducation
+        {/* <CVEducation
           course={this.props.course}
           institution={this.props.institution}
           educationStart={this.props.educationStart}
           educationEnd={this.props.educationEnd}
-        />
+        /> */}
+
+        {this.props.education.map(education => (
+          <CVEducation
+            key={education.id}
+            id={education.id}
+            course={education.course}
+            institution={education.institution}
+            educationStart={education.educationStart}
+            educationEnd={education.educationEnd}
+         />
+        ))}
 
       </div>
     )

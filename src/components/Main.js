@@ -169,9 +169,12 @@ class Main extends Component {
 
     this.setState({workExp: [...this.state.workExp, newWorkExpObj]});
     
-
   }
 
+  removeWorkExp = (event, id) => {
+    let newWorkExp = this.state.workExp.filter(exp => exp.id !== id)
+    this.setState({workExp: [...newWorkExp]});
+  }
 
 
 
@@ -223,6 +226,7 @@ class Main extends Component {
           handleGeneratePDF={this.handleGeneratePDF.bind(this)}
 
           addWorkExp={this.addWorkExp}
+          removeWorkExp={this.removeWorkExp.bind(this)}
         />
         <CVPreview 
           name={this.state.name}

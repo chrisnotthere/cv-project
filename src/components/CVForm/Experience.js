@@ -77,7 +77,7 @@ class Experience extends Component {
           </div>
 
           <div className='buttons'>
-            <button >Delete</button>
+            <button onClick={(e) => this.props.removeWorkExp(e, this.props.id)}>Delete</button>
           </div>
       </div>
     )

@@ -41,6 +41,7 @@ class CVForm extends Component {
               course={workExp.course}
               institution={workExp.institution}
               handleExperienceChange={this.props.handleExperienceChange}
+              removeWorkExp={this.props.removeWorkExp}
           />
           ))}
 

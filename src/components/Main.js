@@ -2,12 +2,9 @@
 /* eslint-disable default-case */
 import '../styles/Main.css';
 import React, {Component} from "react";
-import ReactDOM from 'react-dom';
 import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
 import uniqid from 'uniqid';
-import Experience from './CVForm/Experience';
-import CVExperience from './CVPreview/CVExperience';
 
 class Main extends Component {
   constructor(props) {
@@ -173,55 +170,9 @@ class Main extends Component {
     this.setState({workExp: [...this.state.workExp, newWorkExpObj]});
     
 
-    //it is probably a bad idea to render like i did below(commented out)
-
-    //setTimeout(this.renderWorkExpForm.bind(this), 100);
-    //setTimeout(this.renderWorkExpPreview.bind(this), 100);
-    //this.renderWorkExpPreview();
-    //this.renderWorkExp();
   }
 
-  renderWorkExpForm = () => {
 
-    const section = document.querySelector('#addExpDiv');
-
-    const expSection = (
-      <Experience 
-        id={this.state.workExp[1].id}
-        company={this.state.workExp[1].company}
-        position={this.state.workExp[1].position}
-        workStart={this.state.workExp[1].workStart}
-        workEnd={this.state.workExp[1].workEnd}
-        workDescription={this.state.workExp[1].workDescription}
-
-        handleExperienceChange={this.handleExperienceChange.bind(this)}
-      />
-    );
-
-    ReactDOM.render(expSection, section);
-  }
-
-  renderWorkExpPreview = () => {
-
-    const section = document.querySelector('.add-exp-area');
-
-    const expSection = (
-      <CVExperience 
-        id={this.state.workExp[1].id}
-        company={this.state.workExp[1].company}
-        position={this.state.workExp[1].position}
-        workStart={this.state.workExp[1].workStart}
-        workEnd={this.state.workExp[1].workEnd}
-        workDescription={this.state.workExp[1].workDescription}
-
-        //handleExperienceChange={this.handleExperienceChange.bind(this)}
-      />
-    );
-    
-
-    ReactDOM.render(expSection, section);
-
-  }
 
 
   handleReset = event => {
@@ -244,6 +195,8 @@ class Main extends Component {
           email={this.state.email}
           location={this.state.location}
           description={this.state.description}
+
+          workExp={this.state.workExp}
 
           id={this.state.workExp[0].id}
           company={this.state.workExp[0].company}

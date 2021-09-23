@@ -1,6 +1,5 @@
 import '../../styles/CVForm.css';
 import React, {Component} from "react";
-//import ReactDOM from 'react-dom';
 import Personal from './Personal';
 import Experience from './Experience';
 import Education from './Education';
@@ -10,30 +9,6 @@ class CVForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
   }
-
-  // addExpSection = () => {
-  //   const section = document.querySelector('#addExpDiv');
-
-  //   const expSection = (
-  //     <Experience 
-  //       id=''
-  //       company='some company'
-  //       position=''
-  //       workStart=''
-  //       workEnd=''
-  //       workDescription=''
-  //       course=''
-  //       institution=''
-
-  //       handleExperienceChange={this.props.handleExperienceChange}
-
-  //     />
-  //   );
-
-  //   ReactDOM.render(expSection, section);
-  //   this.props.addWorkExp();
-
-  // }
 
   render() {
     return (
@@ -54,19 +29,22 @@ class CVForm extends Component {
           <p>Work Experience <button onClick={this.props.addWorkExp}>Add</button></p>
           {/* <p>Work Experience <button onClick={this.addExpSection}>Add</button></p> */}
 
-          <Experience 
-            id={this.props.id}
-            company={this.props.company}
-            position={this.props.position}
-            workStart={this.props.workStart}
-            workEnd={this.props.workEnd}
-            workDescription={this.props.workDescription}
-            course={this.props.course}
-            institution={this.props.institution}
-
-            handleExperienceChange={this.props.handleExperienceChange}
-
+          {this.props.workExp.map(workExp => (
+            <Experience 
+              key={workExp.id}
+              id={workExp.id}
+              company={workExp.company}
+              position={workExp.position}
+              workStart={workExp.workStart}
+              workEnd={workExp.workEnd}
+              workDescription={workExp.workDescription}
+              course={workExp.course}
+              institution={workExp.institution}
+              handleExperienceChange={this.props.handleExperienceChange}
           />
+          ))}
+
+
           <div id='addExpDiv'></div>
           
           <p>Education <button>Add</button></p>

@@ -15,7 +15,7 @@ class Education extends Component {
             </label>
             <input 
               value={this.props.course} 
-              onChange={this.props.handleCourseChange}
+              onChange={(e) => this.props.handleEducationChange(e, 'course', this.props.id)}
               placeholder="Course / Program" 
               type="text" 
               className="form-control" 
@@ -33,7 +33,7 @@ class Education extends Component {
             </label>
             <input 
               value={this.props.institution} 
-              onChange={this.props.handleInstitutionChange}
+              onChange={(e) => this.props.handleEducationChange(e, 'institution', this.props.id)}
               placeholder="Institution" 
               type="text" 
               className="form-control" 
@@ -51,7 +51,7 @@ class Education extends Component {
             </label>
             <input 
               value={this.props.educationStart} 
-              onChange={this.props.handleEducationStartChange}
+              onChange={(e) => this.props.handleEducationChange(e, 'educationStart', this.props.id)}
               placeholder="Start Date" 
               type="text" 
               className="form-control" 
@@ -69,7 +69,7 @@ class Education extends Component {
             </label>
             <input 
               value={this.props.educationEnd} 
-              onChange={this.props.handleEducationEndChange}
+              onChange={(e) => this.props.handleEducationChange(e, 'educationEnd', this.props.id)}
               placeholder="End Date" 
               type="text" 
               className="form-control" 
@@ -79,11 +79,12 @@ class Education extends Component {
             />
           </div>
 
+          <br/>
           <div className='buttons'>
             <button onClick={(e) => this.props.removeEducation(e, this.props.id)}>Delete</button>
           </div>
-
           <br/>
+
           {/* <hr/> */}
       </div>
     )

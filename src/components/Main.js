@@ -129,30 +129,66 @@ class Main extends Component {
   //   this.setState({newWorkExp});
   // }
   
+  handleEducationChange = (event, field, id) => {
 
-  handleCourseChange = (event) => {
-    this.setState({
-      course: event.target.value
-    })
+    //find the correct workExp obj by using the id
+    let prevState = [...this.state.education];
+    let newEdu = prevState.find((edu) => edu.id === id);
+
+    //let newWorkExp = [...this.state.workExp];
+    console.log(id);
+
+    switch (field) {
+      case 'course': {
+        newEdu.course = event.target.value;
+        this.setState({newEdu});
+        break;
+      }
+      case 'institution': {
+        newEdu.institution = event.target.value;
+        this.setState({newEdu});
+        break;
+      }
+      case 'educationStart': {
+        newEdu.educationStart = event.target.value;
+        this.setState({newEdu});
+        break;
+      }
+      case 'educationEnd': {
+        newEdu.educationEnd = event.target.value;
+        this.setState({newEdu});
+        break;
+      }
+
+
+    }
+
+
   }
 
-  handleInstitutionChange = (event) => {
-    this.setState({
-      institution: event.target.value
-    })
-  }
+  // handleCourseChange = (event) => {
+  //   this.setState({
+  //     course: event.target.value
+  //   })
+  // }
 
-  handleEducationStartChange = (event) => {
-    this.setState({
-      educationStart: event.target.value
-    })
-  }
+  // handleInstitutionChange = (event) => {
+  //   this.setState({
+  //     institution: event.target.value
+  //   })
+  // }
 
-  handleEducationEndChange = (event) => {
-    this.setState({
-      educationEnd: event.target.value
-    })
-  }
+  // handleEducationStartChange = (event) => {
+  //   this.setState({
+  //     educationStart: event.target.value
+  //   })
+  // }
+
+  // handleEducationEndChange = (event) => {
+  //   this.setState({
+  //     educationEnd: event.target.value
+  //   })
+  // }
 
   //add new empty object to work experience array
   addWorkExp = () => {
@@ -229,18 +265,19 @@ class Main extends Component {
           // workEnd={this.state.workExp[0].workEnd}
           // workDescription={this.state.workExp[0].workDescription}
 
-          course={this.state.education[0].course}
-          institution={this.state.education[0].institution}
-          educationStart={this.state.education[0].educationStart}
-          educationEnd={this.state.education[0].educationEnd}
+          // course={this.state.education[0].course}
+          // institution={this.state.education[0].institution}
+          // educationStart={this.state.education[0].educationStart}
+          // educationEnd={this.state.education[0].educationEnd}
 
           handlePersonalChange={this.handlePersonalChange.bind(this)}
           handleExperienceChange={this.handleExperienceChange.bind(this)}
+          handleEducationChange={this.handleEducationChange.bind(this)}
 
-          handleCourseChange={this.handleCourseChange.bind(this)}
-          handleInstitutionChange={this.handleInstitutionChange.bind(this)}
-          handleEducationStartChange={this.handleEducationStartChange.bind(this)}
-          handleEducationEndChange={this.handleEducationEndChange.bind(this)}
+          // handleCourseChange={this.handleCourseChange.bind(this)}
+          // handleInstitutionChange={this.handleInstitutionChange.bind(this)}
+          // handleEducationStartChange={this.handleEducationStartChange.bind(this)}
+          // handleEducationEndChange={this.handleEducationEndChange.bind(this)}
 
           //HandleSubmit={() => this.handleSubmit()}
           handleReset={this.handleReset.bind(this)}
@@ -269,10 +306,10 @@ class Main extends Component {
           // workEnd={this.state.workExp[0].workEnd}
           // workDescription={this.state.workExp[0].workDescription}
 
-          course={this.state.education[0].course}
-          institution={this.state.education[0].institution}
-          educationStart={this.state.education[0].educationStart}
-          educationEnd={this.state.education[0].educationEnd}
+          // course={this.state.education[0].course}
+          // institution={this.state.education[0].institution}
+          // educationStart={this.state.education[0].educationStart}
+          // educationEnd={this.state.education[0].educationEnd}
           
         />
       </main>

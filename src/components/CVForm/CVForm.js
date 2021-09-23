@@ -57,11 +57,13 @@ class CVForm extends Component {
               educationEnd={education.educationEnd}
               educationDescription={education.educationDescription}
 
-              handleInstitutionChange={education.handleInstitutionChange}
-              handleCourseChange={education.handleCourseChange}
-              handleEducationStartChange={education.handleEducationStartChange}
-              handleEducationEndChange={education.handleEducationEndChange}
+              // handleInstitutionChange={education.handleInstitutionChange}
+              // handleCourseChange={education.handleCourseChange}
+              // handleEducationStartChange={education.handleEducationStartChange}
+              // handleEducationEndChange={education.handleEducationEndChange}
+              handleEducationChange={this.props.handleEducationChange}
               removeEducation={this.props.removeEducation}
+              addEducation={this.props.addEducation}
             />
           ))}
 

@@ -173,9 +173,10 @@ class Main extends Component {
     this.setState({workExp: [...this.state.workExp, newWorkExpObj]});
     
 
-    setTimeout(this.renderWorkExpForm.bind(this), 100);
-    setTimeout(this.renderWorkExpPreview.bind(this), 100);
+    //it is probably a bad idea to render like i did below(commented out)
 
+    //setTimeout(this.renderWorkExpForm.bind(this), 100);
+    //setTimeout(this.renderWorkExpPreview.bind(this), 100);
     //this.renderWorkExpPreview();
     //this.renderWorkExp();
   }
@@ -226,32 +227,6 @@ class Main extends Component {
   handleReset = event => {
     //just refresh the page...
     location.reload();
-
-    // this.setState({
-    //   name: 'John Wick',
-    //   title: 'Software Developer',
-    //   phone: '250 555-0123',
-    //   email: 'JWick@gmail.com',
-    //   location: 'Vancouver, BC', 
-    //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-
-    //   workExp: [{
-    //     id: uniqid(),
-    //     company: 'Google',
-    //     position: 'Junior Developer',
-    //     workStart: '2019',
-    //     workEnd: 'Present',
-    //     workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
-    //   },],
-      
-    //   education: [{
-    //     id: uniqid(),
-    //     course: 'CS50: Introduction to Computer Science',
-    //     institution: 'Harvard University',
-    //     educationStart: '2016',
-    //     educationEnd: '2018',
-    //   },],
-    // })
   }
 
   handleGeneratePDF = (event) => {
@@ -303,6 +278,8 @@ class Main extends Component {
           email={this.state.email}
           location={this.state.location}
           description={this.state.description}
+
+          workExp={this.state.workExp}
 
           id={this.state.workExp[0].id}
           company={this.state.workExp[0].company}

@@ -18,15 +18,20 @@ class CVPreview extends Component {
           description={this.props.description}
         />
         <p className="section-header">Work Experience</p>
-        <CVExperience
-          id={this.props.id}
-          company={this.props.company}
-          position={this.props.position}
-          workStart={this.props.workStart}
-          workEnd={this.props.workEnd}
-          workDescription={this.props.workDescription}
-        />
-        <div className="add-exp-area"></div>
+
+        {/* dynamically add components from workExp array */}
+        {this.props.workExp.map(workExp => (
+          <CVExperience
+            key={workExp.id}
+            id={workExp.id}
+            company={workExp.company}
+            position={workExp.position}
+            workStart={workExp.workStart}
+            workEnd={workExp.workEnd}
+            workDescription={workExp.workDescription}
+          />
+        ))}
+
         <p className="section-header">Education</p>
         <CVEducation
           course={this.props.course}
@@ -37,6 +42,7 @@ class CVPreview extends Component {
 
       </div>
     )
+    
   }
 }
 

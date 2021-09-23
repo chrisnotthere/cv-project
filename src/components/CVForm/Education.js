@@ -5,7 +5,6 @@ class Education extends Component {
   render() {
     return (
       <div className='education'>
-          {/* <p>Education</p> */}
 
           <div className="form-group">
             <label 
@@ -85,7 +84,6 @@ class Education extends Component {
           </div>
           <br/>
 
-          {/* <hr/> */}
       </div>
     )
   }

@@ -19,7 +19,6 @@ class CVPreview extends Component {
         />
         <p className="section-header">Work Experience</p>
 
-        {/* dynamically add components from workExp array */}
         {this.props.workExp.map(workExp => (
           <CVExperience
             key={workExp.id}
@@ -33,12 +32,6 @@ class CVPreview extends Component {
         ))}
 
         <p className="section-header">Education</p>
-        {/* <CVEducation
-          course={this.props.course}
-          institution={this.props.institution}
-          educationStart={this.props.educationStart}
-          educationEnd={this.props.educationEnd}
-        /> */}
 
         {this.props.education.map(education => (
           <CVEducation
@@ -53,7 +46,6 @@ class CVPreview extends Component {
 
       </div>
     )
-    
   }
 }
 

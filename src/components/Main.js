@@ -30,7 +30,7 @@ class Main extends Component {
       
       education: [{
         id: uniqid(),
-        course: 'CS50: Introduction to Computer Science',
+        course: 'CS50: Intro to Computer Science',
         institution: 'Harvard University',
         educationStart: '2016',
         educationEnd: '2018',
@@ -81,13 +81,9 @@ class Main extends Component {
   }
 
   handleExperienceChange = (event, field, id) => {
-
     //find the correct workExp obj by using the id
     let prevState = [...this.state.workExp];
     let newWorkExp = prevState.find((exp) => exp.id === id);
-
-    //let newWorkExp = [...this.state.workExp];
-    console.log(id);
 
     switch (field) {
       case 'company': {
@@ -115,28 +111,12 @@ class Main extends Component {
         this.setState({newWorkExp});
         break;
       }
-
     }
-
-
   }
-
-  /////old handler, keep incase new one breaks
-  // handleCompanyChange = (event, index) => {
-  //   let newWorkExp = [...this.state.workExp];
-  //   let newCompany = event.target.value;
-  //   newWorkExp[index].company = newCompany;
-  //   this.setState({newWorkExp});
-  // }
   
   handleEducationChange = (event, field, id) => {
-
-    //find the correct workExp obj by using the id
     let prevState = [...this.state.education];
     let newEdu = prevState.find((edu) => edu.id === id);
-
-    //let newWorkExp = [...this.state.workExp];
-    console.log(id);
 
     switch (field) {
       case 'course': {
@@ -159,40 +139,10 @@ class Main extends Component {
         this.setState({newEdu});
         break;
       }
-
-
     }
-
-
   }
 
-  // handleCourseChange = (event) => {
-  //   this.setState({
-  //     course: event.target.value
-  //   })
-  // }
-
-  // handleInstitutionChange = (event) => {
-  //   this.setState({
-  //     institution: event.target.value
-  //   })
-  // }
-
-  // handleEducationStartChange = (event) => {
-  //   this.setState({
-  //     educationStart: event.target.value
-  //   })
-  // }
-
-  // handleEducationEndChange = (event) => {
-  //   this.setState({
-  //     educationEnd: event.target.value
-  //   })
-  // }
-
-  //add new empty object to work experience array
   addWorkExp = () => {
-
     let newId = uniqid();
     let newWorkExpObj = {
       id: newId,
@@ -200,11 +150,10 @@ class Main extends Component {
       position: 'My position',
       workStart: '2015',
       workEnd: '2019',
-      workDescription: 'blah blah blah blah blah blah blah blah',
+      workDescription: 'description about my experience',
     }
 
     this.setState({workExp: [...this.state.workExp, newWorkExpObj]});
-    
   }
 
   removeWorkExp = (event, id) => {
@@ -213,18 +162,16 @@ class Main extends Component {
   }
 
   addEducation = () => {
-
     let newId = uniqid();
     let newEduObj = {
       id: newId,
-      course: 'Some company',
-      institution: 'My position',
-      educationStart: '2015',
-      educationEnd: '2019',
+      course: 'Economics: 101',
+      institution: 'Camosun College',
+      educationStart: '2010',
+      educationEnd: '2012',
     }
 
     this.setState({education: [...this.state.education, newEduObj]});
-    
   }
 
   removeEducation = (event, id) => {
@@ -232,15 +179,12 @@ class Main extends Component {
     this.setState({education: [...newEdu]});
   }
 
-
-
   handleReset = event => {
     //just refresh the page...
     location.reload();
   }
 
   handleGeneratePDF = (event) => {
-    //event.preventDefault();
     window.print();
   }
 
@@ -258,28 +202,9 @@ class Main extends Component {
           workExp={this.state.workExp}
           education={this.state.education}
 
-          // id={this.state.workExp[0].id}
-          // company={this.state.workExp[0].company}
-          // position={this.state.workExp[0].position}
-          // workStart={this.state.workExp[0].workStart}
-          // workEnd={this.state.workExp[0].workEnd}
-          // workDescription={this.state.workExp[0].workDescription}
-
-          // course={this.state.education[0].course}
-          // institution={this.state.education[0].institution}
-          // educationStart={this.state.education[0].educationStart}
-          // educationEnd={this.state.education[0].educationEnd}
-
           handlePersonalChange={this.handlePersonalChange.bind(this)}
           handleExperienceChange={this.handleExperienceChange.bind(this)}
           handleEducationChange={this.handleEducationChange.bind(this)}
-
-          // handleCourseChange={this.handleCourseChange.bind(this)}
-          // handleInstitutionChange={this.handleInstitutionChange.bind(this)}
-          // handleEducationStartChange={this.handleEducationStartChange.bind(this)}
-          // handleEducationEndChange={this.handleEducationEndChange.bind(this)}
-
-          //HandleSubmit={() => this.handleSubmit()}
           handleReset={this.handleReset.bind(this)}
           handleGeneratePDF={this.handleGeneratePDF.bind(this)}
 
@@ -298,19 +223,6 @@ class Main extends Component {
 
           workExp={this.state.workExp}
           education={this.state.education}
-
-          // id={this.state.workExp[0].id}
-          // company={this.state.workExp[0].company}
-          // position={this.state.workExp[0].position}
-          // workStart={this.state.workExp[0].workStart}
-          // workEnd={this.state.workExp[0].workEnd}
-          // workDescription={this.state.workExp[0].workDescription}
-
-          // course={this.state.education[0].course}
-          // institution={this.state.education[0].institution}
-          // educationStart={this.state.education[0].educationStart}
-          // educationEnd={this.state.education[0].educationEnd}
-          
         />
       </main>
     )
@@ -318,4 +230,3 @@ class Main extends Component {
 }
 
 export default Main;
-

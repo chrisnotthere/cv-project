@@ -1,5 +1,5 @@
 # cv-project
-[View it live](link in here) 
+[View it live](https://chrisnotthere.github.io/cv-project/) 
 
 My first React application! This simple app takes a users information and formats everything into a resume. For more info, see [here](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/cv-application)
 

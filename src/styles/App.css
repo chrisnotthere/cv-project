@@ -1,8 +1,0 @@
-.App {
-  /* text-align: center; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: rgb(252, 178, 193);
-  height: 100vh;
-}

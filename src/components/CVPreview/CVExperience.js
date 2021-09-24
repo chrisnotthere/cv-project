@@ -8,12 +8,12 @@ class CVExperience extends Component {
         <div >
           <div className="cv-experience">
             <div className="cv-experience-header">
-              <div>
+              <div className="cv-experience-company">
                 <p>{this.props.company}</p>
               </div>
-              <div className="cv-experience-company">
-                <p>{this.props.position}</p>
-                <p>{`${this.props.workStart} - ${this.props.workEnd}`}</p>
+              <div className="cv-experience-info">
+                <p className='cv-experience-position'>{this.props.position}</p>
+                <p style={{ 'font-weight': 'bold' }}>{`${this.props.workStart} - ${this.props.workEnd}`}</p>
               </div>
             </div>
             <div className="cv-experience-description">
@@ -21,7 +21,6 @@ class CVExperience extends Component {
             </div>
           </div>
         </div>
-        <hr/>
         <p>{this.props.description}</p>
       </>
     )

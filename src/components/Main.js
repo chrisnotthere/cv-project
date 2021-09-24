@@ -17,7 +17,7 @@ class Main extends Component {
       phone: '250 555-0123',
       email: 'JWick@gmail.com',
       location: 'Vancouver, BC', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      description: 'Brief bio about yourself in here...',
 
       workExp: [{
         id: uniqid(),
@@ -25,7 +25,7 @@ class Main extends Component {
         position: 'Junior Developer',
         workStart: '2019',
         workEnd: 'Present',
-        workDescription: 'Commodo laboris amet aliquip incididunt do ut est exercitation blahblahblah.',
+        workDescription: 'Talk about what you did during your time here.',
       },],
       
       education: [{

@@ -17,8 +17,10 @@ class CVPreview extends Component {
           location={this.props.location}
           description={this.props.description}
         />
-        <p className="section-header">Work Experience</p>
-
+        <hr/>
+        <p className="section-header exp-header">Work Experience</p>
+        <hr/>
+        
         {this.props.workExp.map(workExp => (
           <CVExperience
             key={workExp.id}
@@ -30,8 +32,9 @@ class CVPreview extends Component {
             workDescription={workExp.workDescription}
           />
         ))}
-
+        <hr/>
         <p className="section-header">Education</p>
+        <hr/>
 
         {this.props.education.map(education => (
           <CVEducation

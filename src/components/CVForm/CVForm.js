@@ -27,7 +27,6 @@ class CVForm extends Component {
           />
 
           <p>Work Experience <button onClick={this.props.addWorkExp}>Add</button></p>
-          {/* <p>Work Experience <button onClick={this.addExpSection}>Add</button></p> */}
 
           {this.props.workExp.map(workExp => (
             <Experience 
@@ -57,17 +56,13 @@ class CVForm extends Component {
               educationEnd={education.educationEnd}
               educationDescription={education.educationDescription}
 
-              // handleInstitutionChange={education.handleInstitutionChange}
-              // handleCourseChange={education.handleCourseChange}
-              // handleEducationStartChange={education.handleEducationStartChange}
-              // handleEducationEndChange={education.handleEducationEndChange}
               handleEducationChange={this.props.handleEducationChange}
               removeEducation={this.props.removeEducation}
               addEducation={this.props.addEducation}
             />
           ))}
 
-          <div className='buttons'>
+          <div className='buttons buttons-bottom'>
             <button type="submit" >Submit</button>
             <button className='pdf' onClick={this.props.handleGeneratePDF} >Generate PDF</button>
             <button className='reset' onClick={this.props.handleReset} >Reset</button>

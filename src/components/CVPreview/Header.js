@@ -16,8 +16,7 @@ class Header extends Component {
             <p>{this.props.location}</p>
           </div>
         </div>
-        <p>{this.props.description}</p>
-        <hr/>
+        <p className='personal-description' style={{ 'font-style': 'italic' }}>{this.props.description}</p>
       </>
     )
   }

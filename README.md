@@ -8,7 +8,7 @@ Things I learned/improved on: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;React JS<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Functional Components vc Class Components<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Functional Components v Class Components<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State Management<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Styled Components<br />
 

@@ -1,16 +1,20 @@
-import '../styles/Header.css';
-import React, {Component} from "react";
+import styled from 'styled-components';
 
-class Header extends Component {
+const Header = () => {
 
-  render() {
-    return (
-      <header>
-        CV Generator&emsp;
-        <i className="fa fa-file-o" aria-hidden="true"></i>
-      </header>
-    )
-  }
+  return (
+    <HeaderWrapper>
+      CV Generator&emsp;
+      <i className="fa fa-file-o" aria-hidden="true"></i>
+    </HeaderWrapper>
+  )
 }
+
+const HeaderWrapper = styled.header`
+  text-align: center;
+  font-size: 2rem;
+  background-color: aquamarine;
+  padding: 1rem;
+`;
 
 export default Header;

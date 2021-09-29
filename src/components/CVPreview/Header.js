@@ -1,25 +1,21 @@
-import React, {Component} from "react";
+const Header = (props) => {
 
-class Header extends Component {
-
-  render() {
-    return (
-      <>
-        <div className="cvheader">
-          <div>
-            <p className="name">{this.props.name}</p>
-            <p className="title">{this.props.title}</p>
-          </div>
-          <div className="personal-info">
-            <p>{this.props.phone}</p>
-            <p>{this.props.email}</p>
-            <p>{this.props.location}</p>
-          </div>
+  return (
+    <>
+      <div className="cvheader">
+        <div>
+          <p className="name">{props.name}</p>
+          <p className="title">{props.title}</p>
         </div>
-        <p className='personal-description' style={{ 'font-style': 'italic' }}>{this.props.description}</p>
-      </>
-    )
-  }
+        <div className="personal-info">
+          <p>{props.phone}</p>
+          <p>{props.email}</p>
+          <p>{props.location}</p>
+        </div>
+      </div>
+      <p className='personal-description' style={{ 'fontStyle': 'italic' }}>{props.description}</p>
+    </>
+  )
 }
 
 export default Header;

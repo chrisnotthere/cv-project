@@ -1,15 +1,11 @@
-import React, {Component} from "react";
+const CVEducation = props => {
 
-class CVEducation extends Component {
-
-  render() {
-    return (
-      <div className='edu-item'>
-        <div>{this.props.course}</div>
-        <div>{`${this.props.institution} | ${this.props.educationStart} - ${this.props.educationEnd}`}</div>
-      </div>
-    )
-  }
+  return (
+    <div className='edu-item'>
+      <div>{props.course}</div>
+      <div>{`${props.institution} | ${props.educationStart} - ${props.educationEnd}`}</div>
+    </div>
+  )
 }
 
 export default CVEducation;

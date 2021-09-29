@@ -1,17 +1,14 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable default-case */
 import '../styles/Main.css';
-import React, {Component} from "react";
+import React, { useState } from "react";
 import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
 import uniqid from 'uniqid';
 
-class Main extends Component {
-  constructor(props) {
-    super(props)
+const Main = () => {
 
-    // this is the default CV info, before the user enters any information
-    this.state = {
+  const [cv, setCv] = useState({
       name: 'John Wick',
       title: 'Software Developer',
       phone: '250 555-0123',
@@ -35,114 +32,101 @@ class Main extends Component {
         educationStart: '2016',
         educationEnd: '2018',
       },],
+    });
 
-    }
-  }
 
-  handlePersonalChange = (event, field) => {
+  const handlePersonalChange = (event, field) => {
     switch (field) {
       case 'name': {
-        this.setState({
-          name: event.target.value
-        })
+        setCv({...cv, name: event.target.value})
         break;
       }
       case 'title': {
-        this.setState({
-          title: event.target.value
-        })
+        setCv({...cv, title: event.target.value})
         break;
       }
       case 'phone': {
-        this.setState({
-          phone: event.target.value
-        })
+        setCv({...cv, phone: event.target.value})
         break;
       }
       case 'email': {
-        this.setState({
-          email: event.target.value
-        })
+        setCv({...cv, email: event.target.value})
         break;
       }
       case 'location': {
-        this.setState({
-          location: event.target.value
-        })
+        setCv({...cv, location: event.target.value})
         break;
       }
       case 'description': {
-        this.setState({
-          description: event.target.value
-        })
+        setCv({...cv, description: event.target.value})
         break;
       }
     }
   }
 
-  handleExperienceChange = (event, field, id) => {
+  const handleExperienceChange = (event, field, id) => {
     //find the correct workExp obj by using the id
-    let prevState = [...this.state.workExp];
+    let prevState = [...cv.workExp];
     let newWorkExp = prevState.find((exp) => exp.id === id);
 
     switch (field) {
       case 'company': {
         newWorkExp.company = event.target.value;
-        this.setState({newWorkExp});
+        setCv({...cv,newWorkExp});
         break;
       }
       case 'position': {
         newWorkExp.position = event.target.value;
-        this.setState({newWorkExp});
+        setCv({...cv, newWorkExp});
         break;
       }
       case 'workStart': {
         newWorkExp.workStart = event.target.value;
-        this.setState({newWorkExp});
+        setCv({...cv, newWorkExp});
         break;
       }
       case 'workEnd': {
         newWorkExp.workEnd = event.target.value;
-        this.setState({newWorkExp});
+        setCv({...cv, newWorkExp});
         break;
       }
       case 'workDescription': {
         newWorkExp.workDescription = event.target.value;
-        this.setState({newWorkExp});
+        setCv({...cv, newWorkExp});
         break;
       }
     }
   }
   
-  handleEducationChange = (event, field, id) => {
-    let prevState = [...this.state.education];
+  const handleEducationChange = (event, field, id) => {
+    let prevState = [...cv.education];
     let newEdu = prevState.find((edu) => edu.id === id);
 
     switch (field) {
       case 'course': {
         newEdu.course = event.target.value;
-        this.setState({newEdu});
+        setCv({...cv, newEdu});
         break;
       }
       case 'institution': {
         newEdu.institution = event.target.value;
-        this.setState({newEdu});
+        setCv({...cv, newEdu});
         break;
       }
       case 'educationStart': {
         newEdu.educationStart = event.target.value;
-        this.setState({newEdu});
+        setCv({...cv, newEdu});
         break;
       }
       case 'educationEnd': {
         newEdu.educationEnd = event.target.value;
-        this.setState({newEdu});
+        setCv({...cv, newEdu});
         break;
       }
     }
   }
 
-  addWorkExp = () => {
+  const addWorkExp = () => {
     let newId = uniqid();
     let newWorkExpObj = {
       id: newId,
@@ -153,15 +137,15 @@ class Main extends Component {
       workDescription: 'description about my experience',
     }
 
-    this.setState({workExp: [...this.state.workExp, newWorkExpObj]});
+    setCv({...cv, workExp: [...cv.workExp, newWorkExpObj]});
   }
 
-  removeWorkExp = (event, id) => {
-    let newWorkExp = this.state.workExp.filter(exp => exp.id !== id)
-    this.setState({workExp: [...newWorkExp]});
+  const removeWorkExp = (event, id) => {
+    let newWorkExp = cv.workExp.filter(exp => exp.id !== id)
+    setCv({...cv, workExp: [...newWorkExp]});
   }
 
-  addEducation = () => {
+  const addEducation = () => {
     let newId = uniqid();
     let newEduObj = {
       id: newId,
@@ -171,62 +155,61 @@ class Main extends Component {
       educationEnd: '2012',
     }
 
-    this.setState({education: [...this.state.education, newEduObj]});
+    setCv({...cv, education: [...cv.education, newEduObj]});
   }
 
-  removeEducation = (event, id) => {
-    let newEdu = this.state.education.filter(exp => exp.id !== id)
-    this.setState({education: [...newEdu]});
+  const removeEducation = (event, id) => {
+    let newEdu = cv.education.filter(exp => exp.id !== id)
+    setCv({...cv, education: [...newEdu]});
   }
 
-  handleReset = event => {
-    //just refresh the page...
+  const handleReset = event => {
     location.reload();
   }
 
-  handleGeneratePDF = (event) => {
+  const handleGeneratePDF = (event) => {
     window.print();
   }
 
-  render() {
-    return (
-      <main>
-        <CVForm 
-          name={this.state.name}
-          title={this.state.title}
-          phone={this.state.phone}
-          email={this.state.email}
-          location={this.state.location}
-          description={this.state.description}
 
-          workExp={this.state.workExp}
-          education={this.state.education}
+  return (
+    <main>
+      <CVForm 
+        name={cv.name}
+        title={cv.title}
+        phone={cv.phone}
+        email={cv.email}
+        location={cv.location}
+        description={cv.description}
 
-          handlePersonalChange={this.handlePersonalChange.bind(this)}
-          handleExperienceChange={this.handleExperienceChange.bind(this)}
-          handleEducationChange={this.handleEducationChange.bind(this)}
-          handleReset={this.handleReset.bind(this)}
-          handleGeneratePDF={this.handleGeneratePDF.bind(this)}
+        workExp={cv.workExp}
+        education={cv.education}
 
-          addWorkExp={this.addWorkExp}
-          removeWorkExp={this.removeWorkExp.bind(this)}
-          addEducation={this.addEducation}
-          removeEducation={this.removeEducation.bind(this)}
-        />
-        <CVPreview 
-          name={this.state.name}
-          title={this.state.title}
-          phone={this.state.phone}
-          email={this.state.email}
-          location={this.state.location}
-          description={this.state.description}
+        handlePersonalChange={handlePersonalChange.bind(this)}
+        handleExperienceChange={handleExperienceChange.bind(this)}
+        handleEducationChange={handleEducationChange.bind(this)}
+        handleReset={handleReset.bind(this)}
+        handleGeneratePDF={handleGeneratePDF.bind(this)}
 
-          workExp={this.state.workExp}
-          education={this.state.education}
-        />
-      </main>
-    )
-  }
+        addWorkExp={addWorkExp}
+        removeWorkExp={removeWorkExp.bind(this)}
+        addEducation={addEducation}
+        removeEducation={removeEducation.bind(this)}
+      />
+      <CVPreview 
+        name={cv.name}
+        title={cv.title}
+        phone={cv.phone}
+        email={cv.email}
+        location={cv.location}
+        description={cv.description}
+
+        workExp={cv.workExp}
+        education={cv.education}
+      />
+    </main>
+  )
 }
+
 
 export default Main;

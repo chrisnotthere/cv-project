@@ -1,30 +1,26 @@
-import React, {Component} from "react";
+const CVExperience = props => {
 
-class CVExperience extends Component {
-
-  render() {
-    return (
-      <>
-        <div >
-          <div className="cv-experience">
-            <div className="cv-experience-header">
-              <div className="cv-experience-company">
-                <p>{this.props.company}</p>
-              </div>
-              <div className="cv-experience-info">
-                <p className='cv-experience-position'>{this.props.position}</p>
-                <p style={{ 'font-weight': 'bold' }}>{`${this.props.workStart} - ${this.props.workEnd}`}</p>
-              </div>
+  return (
+    <>
+      <div >
+        <div className="cv-experience">
+          <div className="cv-experience-header">
+            <div className="cv-experience-company">
+              <p>{props.company}</p>
             </div>
-            <div className="cv-experience-description">
-              <p>{this.props.workDescription}</p>
+            <div className="cv-experience-info">
+              <p className='cv-experience-position'>{props.position}</p>
+              <p style={{ 'fontWeight': 'bold' }}>{`${props.workStart} - ${props.workEnd}`}</p>
             </div>
           </div>
+          <div className="cv-experience-description">
+            <p>{props.workDescription}</p>
+          </div>
         </div>
-        <p>{this.props.description}</p>
-      </>
-    )
-  }
+      </div>
+      <p>{props.description}</p>
+    </>
+  )
 }
 
 export default CVExperience;

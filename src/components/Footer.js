@@ -1,18 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import '../styles/Footer.css';
-import React, {Component} from "react";
 
-class Footer extends Component {
+const Footer = () => {
 
-  render() {
-    return (
-      <footer>
-        made by chrisnotthere
-        <a href="https://github.com/chrisnotthere/cv-project"><i className="fa fa-github fa-2x fa-spin" aria-hidden="true"></i></a>
-      </footer>
-    )
-  }
+  return (
+    <footer>
+      made by chrisnotthere
+      <a href="https://github.com/chrisnotthere/cv-project"><i className="fa fa-github fa-2x fa-spin" aria-hidden="true"></i></a>
+    </footer>
+  );
 }
 
-export default Footer;
+// const FooterStyle = styled.footer`
 
+
+// `;
+
+
+export default Footer;
